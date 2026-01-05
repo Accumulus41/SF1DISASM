@@ -6254,7 +6254,7 @@ loc_13878:
 		cmpi.b  #-1,d1
 		beq.w   loc_13996
 		bmi.s   loc_13918
-		cmpi.b  #ITEM_NOTHING,d1
+		cmpi.b  #$3F,d1 ; item 'nothing'
 		beq.w   loc_13996
 		ext.w   d1
 		move.w  d1,(MESSAGE_ARG_NAME_2).l
@@ -12998,7 +12998,7 @@ loc_17F30:
 		jsr     j_GetEntityItemsAddress
 		moveq   #ITEM_SLOTS_COUNTER,d2
 loc_17F3C:
-		moveq   #ITEMENTRY_MASK_INDEX,d0
+		moveq   #$3F,d0 ; item mask
 		and.b   (a0)+,d0
 		cmp.b   d0,d3
 		dbeq    d2,loc_17F3C

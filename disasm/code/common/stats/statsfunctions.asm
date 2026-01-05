@@ -425,7 +425,7 @@ loc_24E5C:
 GetDealsStockEntryAddress:
 		
 		lea     (DEALS_ITEMS).l,a0
-		andi.w  #ITEMENTRY_MASK_INDEX,d1
+		andi.w  #$3F,d1 ; item mask
 		asr.w   #1,d1
 		adda.w  d1,a0
 		rts
@@ -471,7 +471,7 @@ loc_24EA6:
 		move.w  d1,(a3)+
 loc_24EB0:
 		addq.w  #1,d1
-		cmpi.w  #ITEM_NOTHING,d1
+		cmpi.w  #$3F,d1 ; item 'nothing'
 		bne.s   loc_24E82
 		move.w  d3,(SHOP_INVENTORY_LENGTH).l
 		movem.l (sp)+,d0-d3/a0-a1/a3
@@ -487,7 +487,7 @@ loc_24EB0:
 IsItemInDealsOrHeldByForce:
 		
 		movem.l d0-d1,-(sp)
-		andi.w  #ITEMENTRY_MASK_INDEX,d1
+		andi.w  #$3F,d1 ; item mask
 		bsr.w   GetDealsStock   
 		bne.s   loc_24ED4
 		bsr.s   IsItemHeldByForce
@@ -509,7 +509,7 @@ IsItemHeldByCharacter:
 		moveq   #ITEM_SLOTS_COUNTER,d2
 loc_24EE6:
 		move.b  (a0)+,d3
-		andi.w  #ITEMENTRY_MASK_INDEX,d3
+		andi.w  #$3F,d3 ; item mask
 		cmp.b   d1,d3
 		beq.s   loc_24EF8
 		dbf     d2,loc_24EE6
@@ -529,7 +529,7 @@ loc_24EF8:
 IsItemHeldByForce:
 		
 		movem.l d1-d3/a0,-(sp)
-		andi.w  #ITEMENTRY_MASK_INDEX,d1
+		andi.w  #$3F,d1 ; item mask
 		moveq   #FORCE_MEMBERS_COUNTER,d0
 loc_24F08:
 		bsr.s   IsItemHeldByCharacter

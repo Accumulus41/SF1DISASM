@@ -126,7 +126,7 @@ LoadWeaponspriteIndex:
 		jsr     j_GetEquippedItemForCombatant
 		bcs.s   @Skip           ; skip if no equipped item found
 		movea.l (p_WeaponSpriteData).l,a0
-		andi.w  #ITEMENTRY_MASK_INDEX,d2
+		andi.w  #$3F,d2 ; item mask
 		move.w  d2,((EQUIPPED_WEAPON_INDEX-$1000000)).w
 		sub.b   (a0)+,d2
 		bcs.s   @Skip

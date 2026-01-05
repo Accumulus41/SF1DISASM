@@ -518,7 +518,7 @@ UseItem:
 GetItemUseRangeAndEffect:
 		
 		movem.l d1/a1,-(sp)
-		andi.w  #ITEMENTRY_MASK_INDEX,d1
+		andi.w  #$3F,d1 ; item mask
 		move.w  d1,((BATTLESCENE_ITEM_OR_SPELL_INDEX-$1000000)).w
 		bsr.w   GetItemEntryAddress
 		move.b  ITEMDEF_OFFSET_USE_RANGE(a1),d4
@@ -829,7 +829,7 @@ loc_238BC:
 
 GetItemNameAddress:
 		
-		andi.b  #ITEMENTRY_MASK_INDEX,d1
+		andi.b  #$3F,d1 ; item mask
 		movea.l (p_ItemNames).l,a0
 
     ; End of function GetItemNameAddress

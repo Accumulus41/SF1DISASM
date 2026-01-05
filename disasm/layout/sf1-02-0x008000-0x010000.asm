@@ -6366,7 +6366,7 @@ WriteItemNamesAndIcons:
 		movem.l (sp)+,a0-a1
 		movem.w (sp)+,d0-d1/d6-d7
 		                
-		btst    #ITEMENTRY_BIT_EQUIPPED,d1
+		btst    #7,d1 ; test equipped
 		beq.w   @NextItem       ; move on to next item if current one is not equipped
 		movem.w d6-d7,-(sp)
 		movem.l a0-a1,-(sp)
@@ -6474,7 +6474,7 @@ loc_B826:
 		cmpi.b  #-1,d1
 		beq.w   loc_B85A
 		move.l  a0,-(sp)
-		andi.w  #ITEMENTRY_MASK_INDEX,d1
+		andi.w  #$3F,d1 ; item mask
 		movea.l (p_icons_Item).l,a0
 		move.w  d1,d2
 		add.w   d1,d1
@@ -7410,8 +7410,8 @@ loc_C676:
 GetIconTilesAddress:
 		
 		move.b  (a3,d1.w),d1
-		andi.w  #ITEMENTRY_MASK_INDEX,d1
-		cmpi.w  #ITEM_NOTHING,d1
+		andi.w  #$3F,d1 ; item mask
+		cmpi.w  #$3F,d1 ; item 'nothing'
 		bne.s   @Continue
 		                
 		movea.l (p_icons_Item).l,a0
@@ -8498,7 +8498,7 @@ loc_DC8C:
 loc_DC8E:
 		lsl.w   #2,d1
 		move.w  2(a3,d1.w),d1
-		andi.w  #ITEMENTRY_MASK_INDEX,d1
+		andi.w  #$3F,d1 ; item mask
 		move.w  d1,d7
 		add.w   d1,d1
 		add.w   d7,d1

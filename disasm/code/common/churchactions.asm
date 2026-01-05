@@ -180,7 +180,7 @@ loc_171DC:
 		btst    #ITEMTYPE_BIT_CURSED,d2
 		beq.s   @RemoveCursedRing
 		jsr     j_GetEntityItemsAddress
-		bclr    #ITEMENTRY_BIT_EQUIPPED,(a0,d3.w)
+		bclr    #7,(a0,d3.w) ; clear equipped
 @RemoveCursedRing:
 		
 		move.w  #ITEMTYPE_MASK_RING,d1
@@ -191,7 +191,7 @@ loc_171DC:
 		btst    #ITEMTYPE_BIT_CURSED,d2
 		beq.s   @ExecuteCureCurse
 		jsr     j_GetEntityItemsAddress
-		bclr    #ITEMENTRY_BIT_EQUIPPED,(a0,d3.w)
+		bclr    #7,(a0,d3.w) ; clear equipped
 @ExecuteCureCurse:
 		
 		jsr     j_ResetCombatants

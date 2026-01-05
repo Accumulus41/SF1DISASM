@@ -158,7 +158,7 @@ sub_EBE0:
 		jsr     j_GetEntityItemsAddress
 		move.b  ((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w,d0
 		move.b  (a0,d0.w),d1
-		andi.w  #ITEMENTRY_MASK_INDEX,d1
+		andi.w  #$3F,d1 ; item mask
 		jsr     j_GetItemNameAddress
 		move.w  d1,d7
 		lea     ((CURRENT_SPEAKER_NAME_VDPTILES-$1000000)).w,a1

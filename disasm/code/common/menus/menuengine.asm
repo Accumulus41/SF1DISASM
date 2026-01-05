@@ -351,7 +351,7 @@ loc_5B92:
 		jsr     j_GetEntityItemsAddress
 		move.b  ((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w,d0
 		move.b  (a0,d0.w),d0
-		andi.w  #ITEMENTRY_MASK_INDEX,d0
+		andi.w  #$3F,d0 ; item mask
 		move.w  d0,((MESSAGE_ARG_NAME_1-$1000000)).w
 		cmpi.b  #ITEM_CHAOS_BREAKER,d0
 		bne.w   loc_5C30
@@ -463,10 +463,10 @@ itemMenuAction_Give:
 		move.w  d1,((word_FFB7C6-$1000000)).w
 		move.b  (a0,d1.w),d1    ; D1 = selected item index
 		move.w  d1,-(sp)        ; save selected item index
-		andi.w  #ITEMENTRY_MASK_INDEX,d1
+		andi.w  #$3F,d1 ; item mask
 		move.w  d1,((MESSAGE_ARG_NAME_1-$1000000)).w
 		move.w  (sp)+,d1        ; restore selected item index -> D1
-		btst    #ITEMENTRY_BIT_EQUIPPED,d1
+		btst    #7,d1 ; test equipped
 		beq.s   byte_5D5C       ; branch if item is not equipped
 		jsr     j_GetItemType
 		btst    #ITEMTYPE_BIT_CURSED,d2
@@ -512,10 +512,10 @@ loc_5DA0:
 		move.w  ((word_FFB7CA-$1000000)).w,d1
 		move.b  (a0,d1.w),d1
 		move.w  d1,-(sp)
-		andi.w  #ITEMENTRY_MASK_INDEX,d1
+		andi.w  #$3F,d1 ; item mask
 		move.w  d1,((MESSAGE_ARG_NAME_1-$1000000)).w
 		move.w  (sp)+,d1
-		btst    #ITEMENTRY_BIT_EQUIPPED,d1
+		btst    #7,d1 ; test equipped
 		beq.w   loc_5E14
 		jsr     j_GetItemType
 		btst    #ITEMTYPE_BIT_CURSED,d2
@@ -632,7 +632,7 @@ itemMenuAction_Drop:
 		move.w  d1,((word_FFB7C6-$1000000)).w
 		move.b  (a0,d1.w),d1
 		move.w  d1,-(sp)
-		andi.w  #ITEMENTRY_MASK_INDEX,d1
+		andi.w  #$3F,d1 ; item mask
 		move.w  d1,((MESSAGE_ARG_NAME_1-$1000000)).w
 		move.w  (sp)+,d1
 		btst    #7,d1
@@ -974,7 +974,7 @@ loc_6298:
 		move.b  ((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w,d0
 		move.b  (a0,d0.w),d0
 		clearTxt
-		andi.w  #ITEMENTRY_MASK_INDEX,d0
+		andi.w  #$3F,d0 ; item mask
 		move.w  d0,((MESSAGE_ARG_NAME_1-$1000000)).w
 		cmpi.b  #ITEM_ANTIDOTE,d0
 		bne.w   loc_632A
@@ -1053,7 +1053,7 @@ byte_63BA:
 		move.w  d1,((word_FFB7C6-$1000000)).w
 		move.b  (a0,d1.w),d1
 		move.w  d1,-(sp)
-		andi.w  #ITEMENTRY_MASK_INDEX,d1
+		andi.w  #$3F,d1 ; item mask
 		move.w  d1,((MESSAGE_ARG_NAME_1-$1000000)).w
 		move.w  (sp)+,d1
 		btst    #7,d1
@@ -1105,7 +1105,7 @@ loc_646E:
 		move.w  ((word_FFB7CA-$1000000)).w,d1
 		move.b  (a0,d1.w),d1
 		move.w  d1,-(sp)
-		andi.w  #ITEMENTRY_MASK_INDEX,d1
+		andi.w  #$3F,d1 ; item mask
 		move.w  d1,((MESSAGE_ARG_NAME_1-$1000000)).w
 		move.w  (sp)+,d1
 		btst    #7,d1
@@ -1259,7 +1259,7 @@ loc_667E:
 		move.w  d1,((word_FFB7C6-$1000000)).w
 		move.b  (a0,d1.w),d1
 		move.w  d1,-(sp)
-		andi.w  #ITEMENTRY_MASK_INDEX,d1
+		andi.w  #$3F,d1 ; item mask
 		move.w  d1,((MESSAGE_ARG_NAME_1-$1000000)).w
 		move.w  (sp)+,d1
 		btst    #7,d1

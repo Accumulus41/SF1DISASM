@@ -235,9 +235,9 @@ LoadCombatantData:
 @ApplyEquipOnStats_Loop:
 		
 		move.b  (a0),d1
-		cmpi.b  #EMPTY_ITEM_SLOT,d1
+		cmpi.b  #$FF,d1 ; empty slot
 		beq.s   @NextItem
-		btst    #ITEMENTRY_BIT_EQUIPPED,d1
+		btst    #7,d1 ; test equipped
 		beq.s   @NextItem
 		bsr.w   GetItemEntryAddress
 		move.b  ITEMDEF_OFFSET_EQUIP_EFFECT(a1),d4
@@ -364,16 +364,16 @@ LoadEnemyStats:
 		bsr.w   sub_21EA6
 		jsr     j_GetEntityItemsAddress
 		move.l  #-1,(a0)        ; 4 empty item slots
-		move.b  BATTLEDATA_ENEMY_ITEM_0(a2),d1
+		move.b  1(a2),d1 ; Battle enemy item 0
 		move.b  d1,(a0)+
-		cmp.b   BATTLEDATA_ENEMY_ITEM_1(a2),d1
+		cmp.b   2(a2),d1 ; Battle enemy item 1
 		beq.s   loc_21E8E
-		move.b  BATTLEDATA_ENEMY_ITEM_1(a2),d1
+		move.b  2(a2),d1 ; Battle enemy item 1
 		move.b  d1,(a0)
 loc_21E8E:
 		jsr     j_GetCharacterSpellsAddress
 		move.l  #-1,(a0)        ; 4 empty spell slots
-		move.b  BATTLEDATA_ENEMY_SPELL(a2),d1
+		move.b  3(a2),d1 ; Battle enemy spell
 		move.b  d1,(a0)
 loc_21EA0:
 		movem.l (sp)+,d0-d1/a0-a3
@@ -3273,11 +3273,11 @@ DecreaseCurrentMpForCombatant:
 
 GiveItem:
 		movem.l d0-d1/a0,-(sp)
-		andi.b  #ITEMENTRY_MASK_INDEX_AND_BROKEN_BIT,d1
+		andi.b  #$7F,d1 ; item/broken mask
 		jsr     j_GetEntityItemsAddress
 		moveq   #ITEM_SLOTS_COUNTER,d0
 loc_22D3E:
-		cmpi.b  #EMPTY_ITEM_SLOT,(a0)
+		cmpi.b  #$FF,(a0) ; empty slot
 		bne.s   loc_22D48
 		move.b  d1,(a0)
 		bra.s   loc_22D52
@@ -3328,7 +3328,7 @@ loc_22D7E:
 		addq.w  #1,d1
 		bra.s   loc_22D7E
 loc_22D8E:
-		move.b  #EMPTY_ITEM_SLOT,3(a0)
+		move.b  #$FF,3(a0) ; empty slot
 		bsr.w   LoadCombatantDataForForceMember
 		movem.l (sp)+,d0-d1/a0
 		rts
@@ -3367,7 +3367,7 @@ CountOccupiedItemSlots:
 		clr.w   d1
 		moveq   #ITEM_SLOTS_COUNTER,d0
 @Loop:
-		cmpi.b  #EMPTY_ITEM_SLOT,(a0)+
+		cmpi.b  #$FF,(a0)+ ; empty slot
 		bne.s   @IncrementOccupiedItemSlotsCounter
 		tst.w   d0
 		bra.s   @Break
@@ -3408,7 +3408,7 @@ BreakItem:
 		movem.l d1/a0,-(sp)
 		jsr     j_GetEntityItemsAddress
 		andi.w  #$FF,d1
-		bset    #ITEMENTRY_BIT_BROKEN,(a0,d1.w)
+		bset    #6,(a0,d1.w) ; set broken
 		movem.l (sp)+,d1/a0
 		rts
 
@@ -3522,7 +3522,7 @@ GetItemsCurseSettingsForCombatant:
 GetItemEntryAddress:
 		
 		move.w  d1,-(sp)
-		andi.w  #ITEMENTRY_MASK_INDEX,d1
+		andi.w  #$3F,d1 ; item mask
 		asl.w   #4,d1
 		movea.l (p_ItemData).l,a1
 		adda.w  d1,a1
@@ -3538,7 +3538,7 @@ GetItemEntryAddress:
 
 GetItemType:
 		move.l  a1,-(sp)
-		cmpi.b  #EMPTY_ITEM_SLOT,d1
+		cmpi.b  #$FF,d1 ; empty slot
 		bne.s   @OccupiedItemSlot
 		clr.w   d2
 		bra.s   @Continue
@@ -3600,9 +3600,9 @@ GetEquippedItem:
 		move.w  #ITEM_SLOTS_COUNTER,d3
 @Loop:
 		move.b  (a0,d3.w),d1
-		cmpi.b  #EMPTY_ITEM_SLOT,d1
+		cmpi.b  #$FF,d1 ; empty slot
 		beq.s   @Next
-		btst    #ITEMENTRY_BIT_EQUIPPED,d1
+		btst    #7,d1 ; test equipped
 		beq.s   @Next
 		bsr.s   GetItemType     
 		and.w   d4,d2
@@ -3616,7 +3616,7 @@ GetEquippedItem:
 @GetItemIndex:
 		
 		move.b  d1,d2
-		andi.w  #ITEMENTRY_MASK_INDEX,d2
+		andi.w  #$3F,d2 ; item mask
 @Continue:
 		movem.l (sp)+,d1/d4/a0
 		rts
@@ -3635,12 +3635,12 @@ EquipItem:
 		jsr     j_GetEntityItemsAddress
 		bsr.w   GetEquippedItem 
 		bcs.s   loc_22F18
-		andi.b  #ITEMENTRY_MASK_INDEX_AND_BROKEN_BIT,(a0,d3.w)
+		andi.b  #$7F,(a0,d3.w) ; item/broken mask
 						; unequip old item
 loc_22F18:
 		cmpi.w  #ITEM_SLOTS_NUMBER,d4
 		bcc.s   loc_22F24
-		ori.b   #ITEMENTRY_MASK_EQUIPPED_BIT,(a0,d4.w)
+		ori.b   #$80,(a0,d4.w) ; set equipped bit
 loc_22F24:
 		bsr.w   FindCombatantEntry
 		bne.s   loc_22F30
@@ -3782,9 +3782,9 @@ FindItemToDrop:
 		move.w  #ITEM_SLOTS_COUNTER,d1
 @Loop:
 		move.b  (a0)+,d2
-		cmpi.b  #EMPTY_ITEM_SLOT,d2
+		cmpi.b  #$FF,d2 ; empty slot
 		beq.s   @Skip           ; skip if item slot is empty
-		andi.w  #ITEMENTRY_MASK_INDEX,d2
+		andi.w  #$3F,d2 ; item mask
 		lea     table_ItemsToDrop(pc), a1
 @FindItem:
 		move.b  (a1)+,d3

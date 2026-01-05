@@ -83,7 +83,7 @@ ApplyOutfitItems:
 		moveq   #ITEM_SLOTS_COUNTER,d1
 @Loop:
 		move.b  (a0)+,d2
-		andi.b  #ITEMENTRY_MASK_INDEX,d2
+		andi.b  #$3F,d2 ; item mask
 		cmp.b   (a1),d2
 		bne.s   @NextItemSlot
 		clr.w   d1
