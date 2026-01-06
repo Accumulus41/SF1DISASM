@@ -1196,12 +1196,12 @@ sub_77A4:
 		jsr     (j_CheckEventFlag).l
 		bne.w   sub_7898
 		bsr.w   sub_80C4
-		cmpi.b  #$3F,d3 ; item 'nothing'
+		cmpi.b  #$FF,d3 ; item 'nothing' ; 0x77C4
 		beq.w   sub_7898
 		clr.w   d7
 		move.b  ((byte_FFB4C5-$1000000)).w,d7
 		move.w  d7,((MESSAGE_ARG_NAME_1-$1000000)).w
-		cmpi.b  #$3F,d3 ; item 'nothing'
+		cmpi.b  #$FF,d3 ; item 'nothing' ; 0x77D6
 		bgt.w   loc_78B0
 		move.w  d3,((MESSAGE_ARG_NAME_2-$1000000)).w
 		jsr     (j_OpenMessageWindow).l
