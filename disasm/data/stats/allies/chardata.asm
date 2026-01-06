@@ -15,12 +15,12 @@ table_InitialForceData:
         startHP    12
         startMP    8
         status     NONE
-        items &         ; 021E 00FF 00FF 00FF
+        items &
             MIDDLE_SWORD|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -38,12 +38,12 @@ table_InitialForceData:
         startHP    11
         startMP    0
         status     NONE
-        items &         ; 0228 00FF 00FF 00FF
+        items &
             BRONZE_LANCE|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -61,12 +61,12 @@ table_InitialForceData:
         startHP    10
         startMP    0
         status     NONE
-        items &         ; 0228 00FF 00FF 00FF
+        items &
             BRONZE_LANCE|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -84,12 +84,12 @@ table_InitialForceData:
         startHP    8
         startMP    0
         status     NONE
-        items &         ; 022D 00FF 00FF 00FF
+        items &
             SPEAR|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -107,12 +107,12 @@ table_InitialForceData:
         startHP    10
         startMP    0
         status     NONE
-        items &         ; 0228 00FF 00FF 00FF
+        items &
             BRONZE_LANCE|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -130,12 +130,12 @@ table_InitialForceData:
         startHP    10
         startMP    0
         status     NONE
-        items &         ; 0228 00FF 00FF 00FF
+        items &
             BRONZE_LANCE|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -153,12 +153,12 @@ table_InitialForceData:
         startHP    8
         startMP    0
         status     NONE
-        items &         ; 0228 00FF 00FF 00FF
+        items &
             BRONZE_LANCE|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -176,12 +176,12 @@ table_InitialForceData:
         startHP    12
         startMP    0
         status     NONE
-        items &         ; 0230 00FF 00FF 00FF
+        items &
             HAND_AXE|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -199,12 +199,12 @@ table_InitialForceData:
         startHP    9
         startMP    0
         status     NONE
-        items &         ; 021D 00FF 00FF 00FF
+        items &
             SHORT_SWORD|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -222,12 +222,12 @@ table_InitialForceData:
         startHP    9
         startMP    0
         status     NONE
-        items &         ; 0228 00FF 00FF 00FF
+        items &
             BRONZE_LANCE|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -245,12 +245,12 @@ table_InitialForceData:
         startHP    8
         startMP    6
         status     NONE
-        items &         ; 0238 00FF 00FF 00FF
+        items &
             POWER_STAFF|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -268,12 +268,12 @@ table_InitialForceData:
         startHP    8
         startMP    6
         status     NONE
-        items &         ; 0238 00FF 00FF 00FF
+        items &
             POWER_STAFF|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -291,12 +291,12 @@ table_InitialForceData:
         startHP    10
         startMP    7
         status     NONE
-        items &         ; 0235 00FF 00FF 00FF
+        items &
             WOODEN_STAFF|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -314,12 +314,12 @@ table_InitialForceData:
         startHP    15
         startMP    15
         status     NONE
-        items &         ; 00FF 00FF 00FF 00FF
-            NOTHING, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+        items &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -337,12 +337,12 @@ table_InitialForceData:
         startHP    11
         startMP    10
         status     NONE
-        items &         ; 0235 00FF 00FF 00FF
+        items &
             WOODEN_STAFF|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -360,12 +360,12 @@ table_InitialForceData:
         startHP    10
         startMP    7
         status     NONE
-        items &         ; 0235 00FF 00FF 00FF
+        items &
             WOODEN_STAFF|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -383,12 +383,12 @@ table_InitialForceData:
         startHP    10
         startMP    7
         status     NONE
-        items &         ; 0238 00FF 00FF 00FF
+        items &
             POWER_STAFF|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -406,12 +406,12 @@ table_InitialForceData:
         startHP    11
         startMP    8
         status     NONE
-        items &         ; 00FF 00FF 00FF 00FF
-            NOTHING, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+        items &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -429,12 +429,12 @@ table_InitialForceData:
         startHP    10
         startMP    0
         status     NONE
-        items &         ; 023C 00FF 00FF 00FF
+        items &
             STEEL_ARROW|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -452,12 +452,12 @@ table_InitialForceData:
         startHP    12
         startMP    0
         status     NONE
-        items &         ; 023B 00FF 00FF 00FF
+        items &
             WOODEN_ARROW|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -475,12 +475,12 @@ table_InitialForceData:
         startHP    9
         startMP    0
         status     NONE
-        items &         ; 0224 00FF 00FF 00FF
+        items &
             ELVEN_ARROW|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -498,12 +498,12 @@ table_InitialForceData:
         startHP    12
         startMP    0
         status     NONE
-        items &         ; 021E 00FF 00FF 00FF
+        items &
             MIDDLE_SWORD|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -521,12 +521,12 @@ table_InitialForceData:
         startHP    10
         startMP    0
         status     NONE
-        items &         ; 021E 00FF 00FF 00FF
+        items &
             MIDDLE_SWORD|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -544,12 +544,12 @@ table_InitialForceData:
         startHP    10
         startMP    0
         status     NONE
-        items &         ; 0228 00FF 00FF 00FF
+        items &
             BRONZE_LANCE|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -567,12 +567,12 @@ table_InitialForceData:
         startHP    12
         startMP    0
         status     NONE
-        items &         ; 00FF 00FF 00FF 00FF
-            NOTHING, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+        items &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -590,12 +590,12 @@ table_InitialForceData:
         startHP    15
         startMP    0
         status     NONE
-        items &         ; 00FF 00FF 00FF 00FF
-            NOTHING, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+        items &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -613,12 +613,12 @@ table_InitialForceData:
         startHP    9
         startMP    0
         status     NONE
-        items &         ; 00FF 00FF 00FF 00FF
-            NOTHING, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+        items &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -636,12 +636,12 @@ table_InitialForceData:
         startHP    28
         startMP    0
         status     NONE
-        items &         ; 0223 00FF 00FF 00FF
+        items &
             KATANA|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -659,12 +659,12 @@ table_InitialForceData:
         startHP    23
         startMP    10
         status     NONE
-        items &         ; 0222 00FF 00FF 00FF
+        items &
             DOOM_BLADE|EQUIPPED, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
@@ -682,12 +682,12 @@ table_InitialForceData:
         startHP    1
         startMP    0
         status     NONE
-        items &         ; 00FF 00FF 00FF 00FF
-            NOTHING, &
-            NOTHING, &
-            NOTHING, &
-            NOTHING
-        spells &        ; FF FF FF FF 00 00
+        items &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED, &
+            NOTHING|BROKEN|EQUIPPED
+        spells &
             NOTHING|LV_4, &
             NOTHING|LV_4, &
             NOTHING|LV_4, &

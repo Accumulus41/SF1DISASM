@@ -2137,10 +2137,9 @@ AiAction_UseItem:
 		
 		movem.l d1-d2/d4/a0-a1,-(sp)
 		move.b  d2,((CURRENT_ITEM_OR_SPELL-$1000000)).w
-		add.b   d2,d2               ; new code
 		jsr     j_GetEntityItemsAddressForCombatant
-		move.w  (a0,d2.w),d1    ; D1 = item index in slot number D2 ; 0x240F6
-		cmpi.w  #$00FF,d1 ; empty slot ; 0x240FA
+		move.b  (a0,d2.w),d1    ; D1 = item index in slot number D2
+		cmpi.b  #$FF,d1 ; empty slot
 		beq.s   @RegularAttack  ; fall back to regular attack if item slot is empty
 		jsr     j_GetItemType
 		btst    #ITEMTYPE_BIT_USABLE,d2

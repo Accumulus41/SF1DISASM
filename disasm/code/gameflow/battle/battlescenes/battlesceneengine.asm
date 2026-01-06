@@ -218,9 +218,9 @@ EndBattleaction:
 		blt.s   loc_216C4
 		movea.l (p_ItemTypes).l,a0
 		move.w  ((SELECTED_ITEM_ENTRY-$1000000)).w,d1
-		btst    #8,d1 ; test broken ; 0x21658
+		btst    #6,d1 ; test broken
 		beq.s   loc_21678
-		andi.w  #$FF,d1 ; item mask ; 0x2165E
+		andi.w  #$3F,d1 ; item mask
 		clr.w   d2
 		move.b  (a0,d1.w),d2
 		addi.w  #$1FA,d2
@@ -246,7 +246,7 @@ loc_2168E:
 		cmpi.w  #25,d7
 		bge.s   loc_216C4
 loc_216A4:
-		andi.w  #$FF,d1 ; item mask ; 0x216A4
+		andi.w  #$3F,d1 ; item mask
 		clr.w   d2
 		move.b  (a0,d1.w),d2
 		addi.w  #$1F4,d2

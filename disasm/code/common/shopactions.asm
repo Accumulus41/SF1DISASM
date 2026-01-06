@@ -148,16 +148,16 @@ loc_16A80:
 		move.w  d1,-$C(a6)
 		jsr     j_GetEntityItemsAddress
 		move.l  a0,-$10(a6)
-		move.w  #$FF,d0 ; item mask ; 0x16AD0
+		move.w  #$3F,d0 ; item mask
 		move.w  -$C(a6),d1
-		and.w   (a0,d1.w),d0        ; 0x16AD8
+		and.b   (a0,d1.w),d0
 		move.w  d0,-$A(a6)
 		move.w  d0,d1
 		jsr     j_GetItemPrice
 		lsr.w   #2,d2
 		move.w  d2,-4(a6)
 		move.w  -$C(a6),d1
-		btst    #8,(a0,d1.w) ; test broken ; 0x16AF2
+		btst    #6,(a0,d1.w)
 		bne.s   loc_16B18
 		move.w  #390,d0         ; "Who are you trying to fool?[Line]That item's not damaged.[Wait2]"
 		bsr.w   DisplayMenuMessage
@@ -193,7 +193,7 @@ loc_16B4E:
 		beq.s   loc_16B78       
 		movea.l -$10(a6),a0
 		move.w  -$C(a6),d0
-		btst    #9,(a0,d0.w) ; test equipped ; 0x16B66
+		btst    #7,(a0,d0.w) ; test equipped
 		beq.s   loc_16B78       
 		move.w  #392,d0         ; "Whoa! I don't repair cursed[Line]items! Nope, not me. I'm[Line]nobody's fool![Wait2]"
 		bsr.w   DisplayMenuMessage
@@ -233,7 +233,7 @@ loc_16B78:
 		bsr.w   OpenGoldWindowInMenu
 		movea.l -$10(a6),a0
 		move.w  -$C(a6),d0
-		bclr    #8,(a0,d0.w) ; clear broken ; 0x16C00
+		bclr    #6,(a0,d0.w)
 		bra.w   loc_16B02       
 @Sell:
 		dbf     d0,@Repair      
@@ -247,9 +247,9 @@ loc_16C0E:
 		move.w  d1,-$C(a6)
 		jsr     j_GetEntityItemsAddress
 		move.l  a0,-$10(a6)
-		move.w  #$FF,d0 ; item mask ; 0x16C30
+		move.w  #$3F,d0 ; item mask
 		move.w  -$C(a6),d1
-		and.w   (a0,d1.w),d0        ; 0x16C38
+		and.b   (a0,d1.w),d0
 		move.w  d0,-$A(a6)
 		move.w  d0,d1
 		cmpi.w  #ITEM_ORB_OF_LIGHT,d0
@@ -299,7 +299,7 @@ loc_16CB4:
 		beq.s   loc_16CF6
 		movea.l -$10(a6),a0
 		move.w  -$C(a6),d0
-		btst    #9,(a0,d0.w) ; test equipped ; 0x16CE4
+		btst    #7,(a0,d0.w) ; test equipped
 		beq.s   loc_16CF6
 		move.w  #387,d0         ; "Hey, wait a minute. I don't[Line]deal with cursed items! It's[Line]bad luck, you know.[Wait2]"
 		bsr.w   DisplayMenuMessage

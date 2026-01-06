@@ -82,8 +82,8 @@ ApplyOutfitItems:
 		jsr     j_GetEntityItemsAddress
 		moveq   #ITEM_SLOTS_COUNTER,d1
 @Loop:
-		move.w  (a0)+,d2            ; 0x23AAE
-		andi.w  #$FF,d2 ; item mask ; 0x23AB0
+		move.b  (a0)+,d2
+		andi.b  #$3F,d2 ; item mask
 		cmp.b   (a1),d2
 		bne.s   @NextItemSlot
 		clr.w   d1

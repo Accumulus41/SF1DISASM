@@ -34,13 +34,13 @@ BATTLEDATA_ENEMY_INDEX: equ 0
 BATTLEDATA_AI_REGIONS: equ 0
 BATTLEDATA_ALLY_Y: equ 1
 BATTLEDATA_ENEMY_Y: equ 1
-BATTLEDATA_ENEMY_ITEM_0: equ 2
+BATTLEDATA_ENEMY_ITEM_0: equ 1
 BATTLEDATA_AI_COMMAND: equ 1
 BATTLEDATA_ENEMY_SPAWN_REGION: equ 2
-BATTLEDATA_ENEMY_ITEM_1: equ 4
+BATTLEDATA_ENEMY_ITEM_1: equ 2
 BATTLEDATA_AI_PARAMETER_0: equ 2
 BATTLEDATA_ENEMY_SPAWN_COUNTER: equ 3
-BATTLEDATA_ENEMY_SPELL: equ 1
+BATTLEDATA_ENEMY_SPELL: equ 3
 BATTLEDATA_AI_PARAMETER_1: equ 3
 
 ; ---------------------------------------------------------------------------
@@ -920,7 +920,7 @@ FORCE_OFFSET_MAXIMUM_MP: equ 22
 FORCE_OFFSET_CURRENT_MP: equ 23
 FORCE_OFFSET_STATUS_EFFECTS: equ 24
 FORCE_OFFSET_ITEMS: equ 26
-FORCE_OFFSET_SPELLS: equ 34
+FORCE_OFFSET_SPELLS: equ 30
 
 ; ---------------------------------------------------------------------------
 
@@ -1014,16 +1014,16 @@ ITEMDEF_OFFSET_PRICE: equ 14
 ; ---------------------------------------------------------------------------
 
 ; enum ItemEntryBitmap
-ITEMENTRY_BIT_BROKEN: equ 8
-ITEMENTRY_BIT_EQUIPPED: equ 9
+ITEMENTRY_BIT_BROKEN: equ 6
+ITEMENTRY_BIT_EQUIPPED: equ 7
 
 ; ---------------------------------------------------------------------------
 
 ; enum ItemEntryMasks
-ITEMENTRY_MASK_INDEX: equ $FF
-ITEMENTRY_MASK_BROKEN_BIT: equ $100
-ITEMENTRY_MASK_INDEX_AND_BROKEN_BIT: equ $1FF
-ITEMENTRY_MASK_EQUIPPED_BIT: equ $200
+ITEMENTRY_MASK_INDEX: equ $3F
+ITEMENTRY_MASK_BROKEN_BIT: equ $40
+ITEMENTRY_MASK_INDEX_AND_BROKEN_BIT: equ $7F
+ITEMENTRY_MASK_EQUIPPED_BIT: equ $80
 
 ; ---------------------------------------------------------------------------
 
@@ -1147,9 +1147,9 @@ ITEM_WOODEN_ARROW: equ 59
 ITEM_STEEL_ARROW: equ 60
 ITEM_ASSAULT_SHELL: equ 61
 ITEM_BUSTER_SHOT: equ 62
-ITEM_NOTHING: equ 255
-ITEM_BROKEN: equ 256
-ITEM_EQUIPPED: equ 512
+ITEM_NOTHING: equ 63
+ITEM_BROKEN: equ 64
+ITEM_EQUIPPED: equ 128
 
 ; ---------------------------------------------------------------------------
 
@@ -1161,7 +1161,7 @@ WEAPONS_START: equ 27
 ; enum ItemSlots
 ITEM_SLOTS_COUNTER: equ 3
 ITEM_SLOTS_NUMBER: equ 4
-EMPTY_ITEM_SLOT: equ $00FF
+EMPTY_ITEM_SLOT: equ $FF
 
 ; ---------------------------------------------------------------------------
 

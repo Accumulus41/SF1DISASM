@@ -6254,7 +6254,7 @@ loc_13878:
 		cmpi.b  #-1,d1
 		beq.w   loc_13996
 		bmi.s   loc_13918
-		cmpi.b  #$FF,d1 ; item 'nothing' ; 0x138CA
+		cmpi.b  #$3F,d1 ; item 'nothing'
 		beq.w   loc_13996
 		ext.w   d1
 		move.w  d1,(MESSAGE_ARG_NAME_2).l
@@ -12998,8 +12998,8 @@ loc_17F30:
 		jsr     j_GetEntityItemsAddress
 		moveq   #ITEM_SLOTS_COUNTER,d2
 loc_17F3C:
-		move.w  #$FF,d0 ; item mask ; 0x17F3C
-		and.w   (a0)+,d0            ; 0x17F3E
+		moveq   #$3F,d0 ; item mask
+		and.b   (a0)+,d0
 		cmp.b   d0,d3
 		dbeq    d2,loc_17F3C
 
@@ -17019,9 +17019,9 @@ loc_1A454:
 		bne.s   loc_1A4D0
 		jsr     (j_CreateMessageWindow).l
 		clr.w   ((MESSAGE_ARG_NAME_1-$1000000)).w
-		move.b  #ITEM_DOMINGO_EGG,d0   ; 0x1A47C
+		moveq   #ITEM_DOMINGO_EGG,d0
 		move.w  d0,((MESSAGE_ARG_NAME_2-$1000000)).w
-		move.b  #ITEM_DOMINGO_EGG,d0   ; 0x1A482
+		moveq   #ITEM_DOMINGO_EGG,d0
 		jsr     GiveItemToHero  
 		bcs.s   loc_1A4B0
 		move.w  #145,d0
@@ -17741,14 +17741,14 @@ loc_1AAEC:
 		jsr     (a5)
 		move.w  #82,d0
 		bsr.w   j_j_SetEventFlag
-		move.b  #ITEM_MOON_STONE,d0    ; 0x1AB0E
+		moveq   #ITEM_MOON_STONE,d0
 		bsr.w   RemoveItemFromForce
-		move.b  #ITEM_LUNAR_DEW,d0     ; 0x1AB14
+		moveq   #ITEM_LUNAR_DEW,d0
 		move.w  d0,((MESSAGE_ARG_NAME_1-$1000000)).w
 		movem.l d0-d1,-(sp)
 		clr.w   d0
 		move.b  (byte_FFF001).l,d0
-		move.b  #ITEM_LUNAR_DEW,d1     ; 0x1AB26
+		moveq   #ITEM_LUNAR_DEW,d1
 		jsr     j_GiveItem
 		movem.l (sp)+,d0-d1
 		clr.w   ((SPEECH_SFX-$1000000)).w
@@ -17878,7 +17878,7 @@ loc_1AC72:
 loc_1AC76:
 		cmpi.w  #$1514,d2
 		bne.s   loc_1AC98
-		move.b  #ITEM_LUNAR_DEW,d0
+		moveq   #ITEM_LUNAR_DEW,d0
 		bsr.w   RemoveItemFromForce
 		move.w  #$6EF,d6
 		clr.w   ((SPEECH_SFX-$1000000)).w
@@ -18381,7 +18381,7 @@ loc_1B120:
 		move.w  #$75F,d6
 		moveq   #0,d0
 		jsr     (a5)
-		move.b  #ITEM_DOMINGO_EGG,d1   ; 0x1B12E
+		moveq   #ITEM_DOMINGO_EGG,d1
 		jsr     j_IsItemHeldByForce
 		bcs.s   loc_1B18A
 		moveq   #2,d0
@@ -18392,7 +18392,7 @@ loc_1B120:
 		jsr     (a5)
 		bra.s   loc_1B188
 loc_1B148:
-		move.b  #ITEM_DOMINGO_EGG,d0   ; 0x1B148
+		moveq   #ITEM_DOMINGO_EGG,d0
 		bsr.w   RemoveItemFromForce
 		moveq   #4,d0
 		jsr     (a5)
@@ -20875,7 +20875,7 @@ loc_1C964:
 		moveq   #8,d0
 		jsr     (a5)
 		jsr     (j_CreateMessageWindow).l
-		move.b  #ITEM_SWORD_OF_DARKNESS,d0  ; 0x1C96E
+		moveq   #ITEM_SWORD_OF_DARKNESS,d0
 		bsr.w   GiveItemToHero  
 		bcc.s   loc_1C97C
 		moveq   #7,d0
@@ -21110,7 +21110,7 @@ loc_1CB1A:
 		moveq   #6,d0
 		jsr     (a5)
 		jsr     (j_CreateMessageWindow).l
-		move.b  #ITEM_SWORD_OF_DARKNESS,d0
+		moveq   #ITEM_SWORD_OF_DARKNESS,d0
 		bsr.w   GiveItemToHero  
 		bcc.s   loc_1CBB0
 		moveq   #7,d0
@@ -21398,7 +21398,7 @@ loc_1CE64:
 		clr.w   ((SPEECH_SFX-$1000000)).w
 		clr.w   ((MESSAGE_ARG_NAME_1-$1000000)).w
 		move.w  #ITEM_CHAOS_BREAKER,((MESSAGE_ARG_NAME_2-$1000000)).w
-		move.b  #ITEM_CHAOS_BREAKER,d0 ; 0x1CE72
+		moveq   #ITEM_CHAOS_BREAKER,d0
 		bsr.w   GiveItemToHero  
 		bcs.s   loc_1CEAE
 		sndCom  MUSIC_ITEM
@@ -21452,7 +21452,7 @@ loc_1CEF8:
 		bne.s   loc_1CF20
 		move.w  #93,d0
 		bsr.w   j_j_SetEventFlag
-		move.b  #ITEM_SWORD_OF_LIGHT,d0  ; 0x1CF06
+		moveq   #ITEM_SWORD_OF_LIGHT,d0
 		bsr.w   RemoveItemFromForce
 		move.w  #92,d0
 		bsr.w   j_j_CheckEventFlag
@@ -21466,7 +21466,7 @@ loc_1CF20:
 		bne.s   loc_1CF48
 		move.w  #92,d0
 		bsr.w   j_j_SetEventFlag
-		move.b  #ITEM_SWORD_OF_DARKNESS,d0  ; 0x1CF2E
+		moveq   #ITEM_SWORD_OF_DARKNESS,d0
 		bsr.w   RemoveItemFromForce
 		move.w  #93,d0
 		bsr.w   j_j_CheckEventFlag

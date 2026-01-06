@@ -22,10 +22,9 @@ loc_26E2C:
 		jsr     j_SetClass
 		move.b  #$14,(a2,d0.w)
 		jsr     j_GetEntityItemsAddress
-		move.l  #$00FF00FF,d1 ; 2 empty slots ; 0x26E4C
+		moveq   #-1,d1
 		move.l  d1,(a0)
-		move.l  d1,4(a0)                      ; new code
-		move.w  (a1)+,(a0)                    ; 0x26E50
+		move.b  (a1)+,(a0)
 		bra.s   loc_26E2C
 loc_26E54:
 		st      (a3)
