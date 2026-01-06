@@ -654,7 +654,7 @@ loc_72C0:
 loc_72C2:
 		lsl.w   #2,d1
 		move.w  2(a3,d1.w),d1
-		andi.w  #$3F,d1 ; item mask
+		andi.w  #$FF,d1 ; item mask  ; 0x72C8
 		move.w  d1,d7
 		add.w   d1,d1
 		add.w   d7,d1

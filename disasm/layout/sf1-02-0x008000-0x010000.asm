@@ -4190,7 +4190,7 @@ loc_A32C:
 		clr.w   d0
 		move.b  ((byte_FFB4C5-$1000000)).w,d0
 		jsr     j_GetEntityItemsAddressForCombatant
-		cmpi.b  #-1,(a0)
+		cmpi.w  #$00FF,(a0) ; 0xA344
 		bne.s   loc_A354
 		moveq   #2,d0           ; "No item." refusal text
 		bsr.w   sub_D32C        
@@ -4277,8 +4277,9 @@ loc_A432:
 		jsr     j_GetEntityItemsAddressForCombatant
 		clr.w   d1
 		move.b  ((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w,d1
+		add.b   d1,d1               ; new code
 		move.b  d1,((byte_FFB4CD-$1000000)).w
-		move.b  (a0,d1.w),d1
+		move.w  (a0,d1.w),d1        ; 0xA446
 		move.b  d1,((byte_FFB4CE-$1000000)).w
 loc_A44E:
 		move.b  #1,((byte_FFB4CC-$1000000)).w
@@ -4310,8 +4311,9 @@ loc_A4B8:
 		jsr     j_GetEntityItemsAddressForCombatant
 		clr.w   d1
 		move.b  ((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w,d1
+		add.b   d1,d1               ; new code
 		move.b  d1,((byte_FFB4CF-$1000000)).w
-		move.b  (a0,d1.w),d2
+		move.w  (a0,d1.w),d2        ; 0xA4C8
 		move.b  d2,((byte_FFB4D0-$1000000)).w
 		jsr     j_RemoveItemForCombatant
 		move.b  ((byte_FFB4CE-$1000000)).w,d1
@@ -4414,8 +4416,9 @@ sub_A5EA:
 		jsr     j_GetEntityItemsAddressForCombatant
 		clr.w   d1
 		move.b  ((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w,d1
+		add.b   d1,d1               ; new code
 		move.b  d1,((byte_FFB4CD-$1000000)).w
-		move.b  (a0,d1.w),d1
+		move.w  (a0,d1.w),d1        ; 0xA610
 		jsr     j_GetItemType
 		btst    #ITEMTYPE_BIT_CANNOT_DROP,d2
 		bne.s   loc_A644        
@@ -6343,15 +6346,15 @@ WriteItemNamesAndIcons:
 		
 		move.w  ((CURRENT_OBJECT-$1000000)).w,d0
 		jsr     j_GetEntityItemsAddressForCombatant
-		move.b  (a0),d1
-		cmpi.b  #-1,d1
+		move.w  (a0),d1             ; 0xB71A
+		cmpi.w  #$00FF,d1           ; 0xB71C
 		beq.w   WriteNothingStringUnderItems
 		lea     ((byte_FFBA2C-$1000000)).w,a1
 		moveq   #3,d6
 @WriteItems_Loop:
 		
-		move.b  (a0)+,d1
-		cmpi.b  #-1,d1
+		move.w  (a0)+,d1            ; 0xB72A
+		cmpi.w  #$00FF,d1           ; 0xB72C
 		beq.w   @Return         ; return if there are no more items
 		bsr.w   WriteSpellIconTiles
 		                
@@ -6470,11 +6473,11 @@ loc_B81E:
 		jsr     j_GetEntityItemsAddressForCombatant
 		moveq   #3,d6
 loc_B826:
-		move.b  (a0)+,d1
-		cmpi.b  #-1,d1
+		move.w  (a0)+,d1            ; 0xB826
+		cmpi.w  #$00FF,d1           ; 0xB828
 		beq.w   loc_B85A
 		move.l  a0,-(sp)
-		andi.w  #$3F,d1 ; item mask
+		andi.w  #$FF,d1 ; item mask ; 0xB832
 		movea.l (p_icons_Item).l,a0
 		move.w  d1,d2
 		add.w   d1,d1
@@ -6839,8 +6842,9 @@ loc_C090:
 		jsr     j_GetEntityItemsAddressForCombatant
 		clr.w   d1
 		move.b  ((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w,d1
-		move.b  (a0,d1.w),d1
-		btst    #7,d1
+		add.b   d1,d1                  ; new code
+		move.w  (a0,d1.w),d1           ; 0xC0D2
+		btst    #9,d1 ; test equipped  ; 0xC0D6
 		beq.w   loc_C0E8
 		jsr     j_GetItemType
 		btst    #ITEMTYPE_BIT_CURSED,d2
@@ -6973,9 +6977,10 @@ loc_C204:
 		beq.s   loc_C226
 		tst.b   ((byte_FFB52A-$1000000)).w
 		beq.w   return_C242
+		add.b   d1,d1               ; new code
 		jsr     j_GetEntityItemsAddressForCombatant
 loc_C21A:
-		move.b  (a0,d1.w),d1
+		move.w  (a0,d1.w),d1        ; 0xC21A
 		jsr     j_UseItem
 		bra.s   loc_C236
 loc_C226:
@@ -7018,7 +7023,13 @@ sub_C262:
 		btst    #0,((CURRENT_MENU-$1000000)).w
 		beq.s   loc_C280
 		jsr     j_GetEntityItemsAddressForCombatant
-		bra.s   loc_C286
+		                       ; removed code
+		add.b   d1,d1          ; new code
+		move.w  (a0,d1.w),d1   ; new code
+		cmpi.w  #$00FF,d1      ; new code
+		bne.w   loc_C298       ; new code
+		ori     #1,ccr         ; new code
+		rts                    ; new code
 loc_C280:
 		jsr     j_GetEntitySpellsAddressForCombatant
 loc_C286:
@@ -7332,10 +7343,15 @@ loc_C5E4:
 		movea.l (p_icons_Spell).l,a2
 		move.b  ((byte_FFB4C9-$1000000)).w,d0
 		jsr     j_GetEntitySpellsAddressForCombatant
+		movea.l a0,a3                    ; new code
+		clr.w   d1                       ; new code
+		bsr.w   GetSpellIconTilesAddress ; new code
+		bra.s   loc_C5FC                 ; new code
 loc_C5F4:
 		movea.l a0,a3
 		clr.w   d1
 		bsr.w   GetIconTilesAddress
+loc_C5FC:
 		lea     (FF0FFE_LOADING_SPACE).l,a1
 		move.w  #ICONTILES_BYTESIZE,d7
 loc_C606:
@@ -7409,9 +7425,10 @@ loc_C676:
 
 GetIconTilesAddress:
 		
-		move.b  (a3,d1.w),d1
-		andi.w  #$3F,d1 ; item mask
-		cmpi.w  #$3F,d1 ; item 'nothing'
+		add.b   d1,d1                    ; new code
+		move.w  (a3,d1.w),d1             ; 0xC6C6
+		andi.w  #$FF,d1 ; item mask      ; 0xC6CA
+		cmpi.w  #$FF,d1 ; item 'nothing' ; 0xC6CE
 		bne.s   @Continue
 		                
 		movea.l (p_icons_Item).l,a0
@@ -7428,6 +7445,37 @@ GetIconTilesAddress:
 		rts
 
     ; End of function GetIconTilesAddress
+
+
+; =============== S U B R O U T I N E =======================================
+
+; In: A2 = icons tiles pointer
+;     A3 = entity items/spells address
+;     D1 = spell slot
+; 
+; Out: A0 = icon tiles address
+
+GetSpellIconTilesAddress:    ; new subroutine
+		
+		move.b  (a3,d1.w),d1
+		andi.w  #$3F,d1 ; spell mask
+		cmpi.w  #$3F,d1 ; spell 'nothing'
+		bne.s   @Continue
+		                
+		movea.l (p_icons_Item).l,a0
+		adda.w  #$2F40,a0 ; icon 'empty' start
+		bra.s   @Return
+@Continue:
+		move.w  d1,d7
+		add.w   d1,d1
+		add.w   d7,d1
+		lsl.w   #6,d1
+		movea.l a2,a0
+		adda.w  d1,a0
+@Return:
+		rts
+
+    ; End of function GetSpellIconTilesAddress
 
 
 ; START OF FUNCTION CHUNK FOR sub_C3AA
@@ -7482,7 +7530,8 @@ loc_C74E:
 		jsr     j_GetEntityItemsAddressForCombatant
 		clr.w   d1
 		move.b  ((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w,d1
-		move.b  (a0,d1.w),d1
+		add.b   d1,d1               ; new code
+		move.w  (a0,d1.w),d1        ; 0xC75E
 		move.w  d1,-(sp)
 		jsr     j_GetItemNameAddress
 		move.w  d1,d7
@@ -8498,7 +8547,7 @@ loc_DC8C:
 loc_DC8E:
 		lsl.w   #2,d1
 		move.w  2(a3,d1.w),d1
-		andi.w  #$3F,d1 ; item mask
+		andi.w  #$FF,d1 ; item mask ; 0xDC94
 		move.w  d1,d7
 		add.w   d1,d1
 		add.w   d7,d1

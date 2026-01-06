@@ -23,7 +23,7 @@ loc_EA76:
 		bmi.w   sub_ED5C
 		jsr     j_GetEntityItemsAddress
 		movea.l a0,a2
-		cmpi.b  #-1,(a0)
+		cmpi.w  #$00FF,(a0) ; 0xEA88
 		beq.s   loc_EA76
 		move.w  d0,-(sp)
 		bsr.w   PickItemSlot
@@ -31,6 +31,7 @@ loc_EA76:
 		clr.w   d1
 		move.b  ((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w,d1
 		blt.s   loc_EA76
+		add.b   d1,d1       ; new code
 		bra.w   sub_ED5C
 
     ; End of function sub_EA72
@@ -51,7 +52,7 @@ PickItemSlot:
 loc_EAC4:
 		btst    #INPUT_BIT_LEFT,(CURRENT_PLAYER_INPUT).l
 		beq.s   loc_EAE4
-		cmpi.b  #-1,1(a2)
+		cmpi.w  #$00FF,2(a2) ; 0xEACE
 		beq.s   loc_EAE4
 		move.b  #1,((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w
 		sndCom  SFX_MENU_SELECTION
@@ -59,7 +60,7 @@ loc_EAC4:
 loc_EAE4:
 		btst    #INPUT_BIT_RIGHT,(CURRENT_PLAYER_INPUT).l
 		beq.s   loc_EB04
-		cmpi.b  #-1,2(a2)
+		cmpi.w  #$00FF,4(a2) ; 0xEAEE
 		beq.s   loc_EB04
 		move.b  #2,((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w
 		sndCom  SFX_MENU_SELECTION
@@ -73,7 +74,7 @@ loc_EB04:
 loc_EB1A:
 		btst    #INPUT_BIT_DOWN,(CURRENT_PLAYER_INPUT).l
 		beq.s   loc_EB3A
-		cmpi.b  #-1,3(a2)
+		cmpi.w  #$00FF,6(a2) ; 0xEB24
 		beq.s   loc_EB3A
 		move.b  #3,((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w
 		sndCom  SFX_MENU_SELECTION
@@ -157,8 +158,9 @@ sub_EBE0:
 		bsr.w   sub_EE9A
 		jsr     j_GetEntityItemsAddress
 		move.b  ((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w,d0
-		move.b  (a0,d0.w),d1
-		andi.w  #$3F,d1 ; item mask
+		add.b   d0,d0               ; new code
+		move.w  (a0,d0.w),d1        ; 0xEC08
+		andi.w  #$FF,d1 ; item mask ; 0xEC0C
 		jsr     j_GetItemNameAddress
 		move.w  d1,d7
 		lea     ((CURRENT_SPEAKER_NAME_VDPTILES-$1000000)).w,a1

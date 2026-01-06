@@ -346,12 +346,14 @@ loc_5B92:
 		jsr     j_GetEntityItemsAddress
 		clr.w   d1
 		move.b  ((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w,d1
-		move.b  (a0,d1.w),d1
+		add.b   d1,d1               ; new code
+		move.w  (a0,d1.w),d1        ; 0x5BB8
 		move.b  d0,((byte_FFF001-$1000000)).w
 		jsr     j_GetEntityItemsAddress
 		move.b  ((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w,d0
-		move.b  (a0,d0.w),d0
-		andi.w  #$3F,d0 ; item mask
+		add.b   d0,d0               ; new code
+		move.w  (a0,d0.w),d0        ; 0x5BCA
+		andi.w  #$FF,d0 ; item mask ; 0x5BCE
 		move.w  d0,((MESSAGE_ARG_NAME_1-$1000000)).w
 		cmpi.b  #ITEM_CHAOS_BREAKER,d0
 		bne.w   loc_5C30
@@ -376,7 +378,7 @@ loc_5B92:
 		clr.b   ((byte_FFB538-$1000000)).w
 		jmp     sub_124008
 loc_5C2E:
-		moveq   #$27,d0 
+		move.b   #$27,d0 ; Chaos Breaker ; 0x5C2E
 loc_5C30:
 		cmpi.b  #ITEM_ANTIDOTE,d0
 		bne.w   loc_5C7E
@@ -460,13 +462,14 @@ itemMenuAction_Give:
 		jsr     j_GetEntityItemsAddress
 		clr.w   d1
 		move.b  ((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w,d1
+		add.b   d1,d1               ; new code
 		move.w  d1,((word_FFB7C6-$1000000)).w
-		move.b  (a0,d1.w),d1    ; D1 = selected item index
+		move.w  (a0,d1.w),d1    ; D1 = selected item index ; 0x5D28
 		move.w  d1,-(sp)        ; save selected item index
-		andi.w  #$3F,d1 ; item mask
+		andi.w  #$FF,d1 ; item mask ; 0x5D2E
 		move.w  d1,((MESSAGE_ARG_NAME_1-$1000000)).w
 		move.w  (sp)+,d1        ; restore selected item index -> D1
-		btst    #7,d1 ; test equipped
+		btst    #9,d1 ; test equipped  ; 0x5D38
 		beq.s   byte_5D5C       ; branch if item is not equipped
 		jsr     j_GetItemType
 		btst    #ITEMTYPE_BIT_CURSED,d2
@@ -488,7 +491,7 @@ loc_5D6A:
 loc_5D7E:
 		jsr     j_GetEntityItemsAddress
 		move.w  d0,((word_FFB7C8-$1000000)).w
-		cmpi.b  #-1,3(a0)
+		cmpi.w  #$00FF,3(a0) ; empty slot  ; 0x5D88
 		beq.s   loc_5DA0        ; branch if member has an empty item slot
 		move.w  d0,-(sp)
 		jsr     j_PickItemSlot
@@ -499,23 +502,24 @@ loc_5DA0:
 		jsr     sub_8068
 		clr.w   d1
 		move.b  ((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w,d1
+		add.b   d1,d1           ; new code
 		move.w  d1,((word_FFB7CA-$1000000)).w
 		move.w  ((CURRENT_OBJECT-$1000000)).w,d0
 		move.w  ((word_FFB7C6-$1000000)).w,d1
 		jsr     j_GetEntityItemsAddress
-		move.b  (a0,d1.w),d1    ; D1 = item index to give
+		move.w  (a0,d1.w),d1    ; D1 = item index to give ; 0x5DBE
 		move.w  ((word_FFB7C8-$1000000)).w,d0
 		jsr     j_GiveItem
 		bcc.w   loc_5E8C        ; branch is item has successfully been given
 		move.w  ((word_FFB7C8-$1000000)).w,d0
 		jsr     j_GetEntityItemsAddress
 		move.w  ((word_FFB7CA-$1000000)).w,d1
-		move.b  (a0,d1.w),d1
+		move.w  (a0,d1.w),d1        ; 0x5DDE
 		move.w  d1,-(sp)
-		andi.w  #$3F,d1 ; item mask
+		andi.w  #$FF,d1 ; item mask ; 0x5DE4
 		move.w  d1,((MESSAGE_ARG_NAME_1-$1000000)).w
 		move.w  (sp)+,d1
-		btst    #7,d1 ; test equipped
+		btst    #9,d1 ; test equipped ; 0x5DEE
 		beq.w   loc_5E14
 		jsr     j_GetItemType
 		btst    #ITEMTYPE_BIT_CURSED,d2
@@ -531,7 +535,7 @@ loc_5E14:
 		move.w  ((word_FFB7CA-$1000000)).w,d1
 		jsr     j_GetEntityItemsAddress
 		clr.w   d2
-		move.b  (a0,d1.w),d2
+		move.w  (a0,d1.w),d2        ; 0x5E2C
 		jsr     j_RemoveItem
 		move.w  d2,d1
 		jsr     j_GiveItem
@@ -540,14 +544,14 @@ loc_5E40:
 		move.w  ((word_FFB7CA-$1000000)).w,d1
 		jsr     j_GetEntityItemsAddress
 		clr.w   d2
-		move.b  (a0,d1.w),d2
+		move.w  (a0,d1.w),d2        ; 0x5E4C
 		move.w  d2,-(sp)
 		jsr     j_RemoveItem
 		move.w  ((CURRENT_OBJECT-$1000000)).w,d0
 		move.w  ((word_FFB7C6-$1000000)).w,d1
 		jsr     j_GetEntityItemsAddress
 		clr.w   d2
-		move.b  (a0,d1.w),d2
+		move.w  (a0,d1.w),d2        ; 0x5E68
 		jsr     j_RemoveItem
 		move.w  ((word_FFB7C8-$1000000)).w,d0
 		move.w  d2,d1
@@ -629,13 +633,14 @@ itemMenuAction_Drop:
 		jsr     j_GetEntityItemsAddress
 		clr.w   d1
 		move.b  ((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w,d1
+		add.b   d1,d1               ; new code
 		move.w  d1,((word_FFB7C6-$1000000)).w
-		move.b  (a0,d1.w),d1
+		move.w  (a0,d1.w),d1        ; 0x5F74
 		move.w  d1,-(sp)
-		andi.w  #$3F,d1 ; item mask
+		andi.w  #$FF,d1 ; item mask ; 0x5F7A
 		move.w  d1,((MESSAGE_ARG_NAME_1-$1000000)).w
 		move.w  (sp)+,d1
-		btst    #7,d1
+		btst    #9,d1 ; test equipped ; 0x5F84
 		beq.w   loc_5FAA
 		jsr     j_GetItemType
 		btst    #ITEMTYPE_BIT_CURSED,d2
@@ -972,9 +977,10 @@ loc_6298:
 		jsr     j_GetEntityItemsAddressForCombatant
 		clr.w   d0
 		move.b  ((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w,d0
-		move.b  (a0,d0.w),d0
+		add.b   d0,d0               ; new code
+		move.w  (a0,d0.w),d0        ; 0x62CA
 		clearTxt
-		andi.w  #$3F,d0 ; item mask
+		andi.w  #$FF,d0 ; item mask ; 0x6240
 		move.w  d0,((MESSAGE_ARG_NAME_1-$1000000)).w
 		cmpi.b  #ITEM_ANTIDOTE,d0
 		bne.w   loc_632A
@@ -1050,13 +1056,14 @@ byte_63BA:
 		jsr     j_GetEntityItemsAddressForCombatant
 		clr.w   d1
 		move.b  ((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w,d1
+		add.b   d1,d1               ; new code
 		move.w  d1,((word_FFB7C6-$1000000)).w
-		move.b  (a0,d1.w),d1
+		move.w  (a0,d1.w),d1        ; 0x63E8
 		move.w  d1,-(sp)
-		andi.w  #$3F,d1 ; item mask
+		andi.w  #$FF,d1 ; item mask ; 0x63EE
 		move.w  d1,((MESSAGE_ARG_NAME_1-$1000000)).w
 		move.w  (sp)+,d1
-		btst    #7,d1
+		btst    #9,d1 ; test equipped ; 0x63F8
 		beq.w   byte_641E
 		jsr     j_GetItemType
 		btst    #ITEMTYPE_BIT_CURSED,d2
@@ -1080,7 +1087,7 @@ loc_6432:
 loc_644A:
 		jsr     j_GetEntityItemsAddress
 		move.w  d0,((word_FFB7C8-$1000000)).w
-		cmpi.b  #-1,3(a0)
+		cmpi.w  #$00FF,6(a0) ; empty slot ; 0x6454
 		beq.w   loc_646E
 		move.w  d0,-(sp)
 		jsr     j_PickItemSlot
@@ -1092,23 +1099,24 @@ loc_646E:
 		bsr.w   DisplayAdvisorPortrait
 		clr.w   d1
 		move.b  ((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w,d1
+		add.b   d1,d1               ; new code
 		move.w  d1,((word_FFB7CA-$1000000)).w
 		move.w  ((CURRENT_OBJECT-$1000000)).w,d0
 		move.w  ((word_FFB7C6-$1000000)).w,d1
 		jsr     j_GetEntityItemsAddressForCombatant
-		move.b  (a0,d1.w),d1
+		move.w  (a0,d1.w),d1        ; 0x6490
 		move.w  ((word_FFB7C8-$1000000)).w,d0
 		jsr     j_GiveItemForCombatant
 		bcc.w   loc_655E
 		move.w  ((word_FFB7C8-$1000000)).w,d0
 		jsr     j_GetEntityItemsAddressForCombatant
 		move.w  ((word_FFB7CA-$1000000)).w,d1
-		move.b  (a0,d1.w),d1
+		move.w  (a0,d1.w),d1        ; 0x64B0
 		move.w  d1,-(sp)
-		andi.w  #$3F,d1 ; item mask
+		andi.w  #$FF,d1 ; item mask ; 0x64B6
 		move.w  d1,((MESSAGE_ARG_NAME_1-$1000000)).w
 		move.w  (sp)+,d1
-		btst    #7,d1
+		btst    #9,d1 ; test equipped ; 0x64C0
 		beq.w   loc_64E6
 		jsr     j_GetItemType
 		btst    #ITEMTYPE_BIT_CURSED,d2
@@ -1124,7 +1132,7 @@ loc_64E6:
 		move.w  ((word_FFB7CA-$1000000)).w,d1
 		jsr     j_GetEntityItemsAddress
 		clr.w   d2
-		move.b  (a0,d1.w),d2
+		move.w  (a0,d1.w),d2        ; 0x64FE
 		jsr     j_RemoveItem
 		move.w  d2,d1
 		jsr     j_GiveItem
@@ -1133,14 +1141,14 @@ loc_6512:
 		move.w  ((word_FFB7CA-$1000000)).w,d1
 		jsr     j_GetEntityItemsAddressForCombatant
 		clr.w   d2
-		move.b  (a0,d1.w),d2
+		move.w  (a0,d1.w),d2        ; 0x651E
 		move.w  d2,-(sp)
 		jsr     j_RemoveItemForCombatant
 		move.w  ((CURRENT_OBJECT-$1000000)).w,d0
 		move.w  ((word_FFB7C6-$1000000)).w,d1
 		jsr     j_GetEntityItemsAddressForCombatant
 		clr.w   d2
-		move.b  (a0,d1.w),d2
+		move.w  (a0,d1.w),d2        ; 0x653A
 loc_653E:
 		jsr     j_RemoveItemForCombatant
 loc_6544:
@@ -1255,14 +1263,15 @@ loc_6662:
 		jsr     j_GetEntityItemsAddressForCombatant
 		clr.w   d1
 		move.b  ((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w,d1
+		add.b   d1,d1               ; new code
 loc_667E:
 		move.w  d1,((word_FFB7C6-$1000000)).w
-		move.b  (a0,d1.w),d1
+		move.w  (a0,d1.w),d1        ; 0x6682
 		move.w  d1,-(sp)
-		andi.w  #$3F,d1 ; item mask
+		andi.w  #$FF,d1 ; item mask ; 0x6688
 		move.w  d1,((MESSAGE_ARG_NAME_1-$1000000)).w
 		move.w  (sp)+,d1
-		btst    #7,d1
+		btst    #9,d1 ; test equipped ; 0x6692
 		beq.w   loc_66B8
 		jsr     j_GetItemType
 		btst    #ITEMTYPE_BIT_CURSED,d2

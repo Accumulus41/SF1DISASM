@@ -135,7 +135,7 @@ chestItem:  macro
                 dc.b \1
                 dc.b \2
                 dc.b \3
-                defineBitfield.b ITEM_,\4
+                dc.b \4
             endm
 
 defineName: macro
@@ -284,10 +284,10 @@ status:     macro
             endm
     
 items:      macro
-                defineBitfield.b ITEM_,\1
-                defineBitfield.b ITEM_,\2
-                defineBitfield.b ITEM_,\3
-                defineBitfield.b ITEM_,\4
+                defineBitfield.w ITEM_,\1
+                defineBitfield.w ITEM_,\2
+                defineBitfield.w ITEM_,\3
+                defineBitfield.w ITEM_,\4
             endm
     
 spells:     macro
@@ -295,7 +295,7 @@ spells:     macro
                 defineBitfield.b SPELL_,\2
                 defineBitfield.b SPELL_,\3
                 defineBitfield.b SPELL_,\4
-                dcb.b 6,0
+                dcb.b 2,0
             endm
 			
 ; enemy definition
@@ -461,9 +461,9 @@ allyPosition: macro
     
 enemyCombatant: macro
     defineShorthand.b ENEMY_,\1
-    defineBitfield.b ITEM_,\2
-    defineBitfield.b ITEM_,\3
     defineBitfield.b SPELL_,\4
+    defineBitfield.w ITEM_,\2
+    defineBitfield.w ITEM_,\3
     endm
     
 numberEnemies: macro
@@ -501,7 +501,7 @@ speechSfx:  macro
 creditsAlly: macro
                 defineShorthand.b ALLY_,\1
                 defineShorthand.b CLASS_,\2
-                defineBitfield.b ITEM_,\3
+                defineBitfield.w ITEM_,\3
             endm
     
 vdpTile: macro

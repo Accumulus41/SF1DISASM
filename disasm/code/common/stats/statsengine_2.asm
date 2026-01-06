@@ -518,7 +518,7 @@ UseItem:
 GetItemUseRangeAndEffect:
 		
 		movem.l d1/a1,-(sp)
-		andi.w  #$3F,d1 ; item mask
+		andi.w  #$FF,d1 ; item mask ; 0x23664
 		move.w  d1,((BATTLESCENE_ITEM_OR_SPELL_INDEX-$1000000)).w
 		bsr.w   GetItemEntryAddress
 		move.b  ITEMDEF_OFFSET_USE_RANGE(a1),d4
@@ -545,7 +545,8 @@ Battleaction_UseItem:
 		jsr     j_GetEntityItemsAddressForCombatant
 		andi.w  #$FF,d1
 		move.w  d1,((SELECTED_ITEM_SLOT-$1000000)).w
-		move.b  (a0,d1.w),d1
+		add.b   d1,d1          ; new code
+		move.w  (a0,d1.w),d1   ; 0x23696
 		move.w  d1,((SELECTED_ITEM_ENTRY-$1000000)).w
 		bsr.s   GetItemUseRangeAndEffect
 		movem.l (sp)+,d1/a0
@@ -829,7 +830,7 @@ loc_238BC:
 
 GetItemNameAddress:
 		
-		andi.b  #$3F,d1 ; item mask
+		andi.b  #$FF,d1 ; item mask ; 0x238C2
 		movea.l (p_ItemNames).l,a0
 
     ; End of function GetItemNameAddress
