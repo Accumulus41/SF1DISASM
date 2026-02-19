@@ -9,7 +9,7 @@
 LoadEndingCreditsForce:
 		
 		movem.l d0-d1/a0-a3,-(sp)
-		lea     table_EndingCreditsForceData(pc), a1
+		lea     table_EndingCreditsForceData, a1
 		lea     (PROMOTED_AT_LEVELS).l,a2
 		lea     (BATTLE_PARTY_MEMBERS).l,a3
 		clr.w   d0

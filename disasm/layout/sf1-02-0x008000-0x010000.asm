@@ -2956,8 +2956,8 @@ sub_96AE:
 		movea.l (p_BattleChests).l,a0
 		adda.w  d7,a0
 		move.b  ((CURRENT_REGION-$1000000)).w,d1
-		move.w  #$1F,d7
-		clr.w   d3
+		move.w  #$14,d7
+		moveq   #11,d3
 loc_96CA:
 		cmp.b   (a0),d1
 		bne.s   loc_96F2
@@ -2976,7 +2976,7 @@ loc_96CA:
 		move.w  (sp)+,d3
 loc_96F2:
 		addq.w  #1,d3
-		addq.l  #4,a0
+		addq.l  #6,a0
 		dbf     d7,loc_96CA
                 
 		rts
@@ -4426,6 +4426,7 @@ loc_A620:
 		move.b  ((byte_FFB4C5-$1000000)).w,d0
 		clr.w   d1
 		move.b  ((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w,d1
+		add.b   d1,d1               ; new code
 		movem.w d1,-(sp)
 		move.b  (a0,d1.w),d1
 		jsr     j_IncrementDealsStock
@@ -5320,8 +5321,8 @@ loc_ADF2:
 		lsl.w   #7,d7
 		movea.l (p_BattleChests).l,a0
 		adda.w  d7,a0
-		move.w  #$1F,d7
-		clr.w   d3
+		move.w  #$14,d7
+		moveq   #11,d3
 loc_AE0A:
 		cmp.b   (a0),d0
 		bne.s   loc_AE2A
@@ -5332,11 +5333,11 @@ loc_AE0A:
 		bset    #0,((byte_FFB4D5-$1000000)).w
 		move.w  d3,d0
 		clr.w   d3
-		move.b  3(a0),d3
+		move.w  4(a0),d3
 		bra.s   return_AE34
 loc_AE2A:
 		addq.w  #1,d3
-		addq.l  #4,a0
+		addq.l  #6,a0
 		dbf     d7,loc_AE0A
                 
 		moveq   #-1,d0
@@ -6369,7 +6370,7 @@ WriteItemNamesAndIcons:
 		movem.l (sp)+,a0-a1
 		movem.w (sp)+,d0-d1/d6-d7
 		                
-		btst    #7,d1 ; test equipped
+		btst    #9,d1 ; test equipped
 		beq.w   @NextItem       ; move on to next item if current one is not equipped
 		movem.w d6-d7,-(sp)
 		movem.l a0-a1,-(sp)
@@ -7346,59 +7347,30 @@ loc_C5E4:
 		movea.l a0,a3                    ; new code
 		clr.w   d1                       ; new code
 		bsr.w   GetSpellIconTilesAddress ; new code
-		bra.s   loc_C5FC                 ; new code
+		bsr.s   sub_C5FC                 ; new code
+		moveq   #1,d1                    ; new code
+		bsr.w   GetSpellIconTilesAddress ; new code
+		bsr.w   sub_C624                 ; new code
+		moveq   #2,d1                    ; new code
+		bsr.w   GetSpellIconTilesAddress ; new code
+		bsr.w   sub_C624                 ; new code
+		moveq   #3,d1                    ; new code
+		bsr.w   GetSpellIconTilesAddress ; new code
+		bra.s   loc_3E3C                 ; new code
 loc_C5F4:
 		movea.l a0,a3
 		clr.w   d1
 		bsr.w   GetIconTilesAddress
-loc_C5FC:
-		lea     (FF0FFE_LOADING_SPACE).l,a1
-		move.w  #ICONTILES_BYTESIZE,d7
-loc_C606:
-		jsr     (j_CopyBytes).l
-		adda.w  #ICONTILES_BYTESIZE,a1
-		move.l  a1,-(sp)
-		move.w  #$BF,d0 
-loc_C616:
-		clr.l   (a1)+
-		dbf     d0,loc_C616
-                
-		movea.l (sp)+,a1
-		moveq   #1,d1
-		bsr.w   GetIconTilesAddress
-		moveq   #5,d7
-loc_C626:
-		move.l  (a0)+,$10(a1)
-		move.l  (a0)+,$14(a1)
-		move.l  (a0)+,$18(a1)
-		move.l  (a0)+,$1C(a1)
-		move.l  (a0)+,$40(a1)
-		move.l  (a0)+,$44(a1)
-		move.l  (a0)+,$48(a1)
-		move.l  (a0)+,$4C(a1)
-		adda.w  #$20,a1 
-		dbf     d7,loc_C626
-                
-		adda.w  #$40,a1 
-		moveq   #2,d1
-		bsr.w   GetIconTilesAddress
-		moveq   #5,d7
-loc_C65A:
-		move.l  (a0)+,$10(a1)
-		move.l  (a0)+,$14(a1)
-		move.l  (a0)+,$18(a1)
-		move.l  (a0)+,$1C(a1)
-		move.l  (a0)+,$40(a1)
-		move.l  (a0)+,$44(a1)
-		move.l  (a0)+,$48(a1)
-loc_C676:
-		move.l  (a0)+,$4C(a1)
-		adda.w  #$20,a1 
-		dbf     d7,loc_C65A
-                
-		adda.w  #$40,a1 
-		moveq   #3,d1
-		bsr.w   GetIconTilesAddress
+		bsr.s   sub_C5FC                 ; new code
+		moveq   #1,d1                    ; new code
+		bsr.w   GetIconTilesAddress      ; new code
+		bsr.s   sub_C624                 ; new code
+		moveq   #2,d1                    ; new code
+		bsr.w   GetIconTilesAddress      ; new code
+		bsr.s   sub_C624                 ; new code
+		moveq   #3,d1                    ; new code
+		bsr.w   GetIconTilesAddress      ; new code
+loc_3E3C:
 		move.w  #ICONTILES_BYTESIZE,d7
 		jsr     (j_CopyBytes).l
 		adda.w  #ICONTILES_BYTESIZE,a1
@@ -7413,6 +7385,37 @@ loc_C676:
 		jmp     (j_WaitForDmaQueueProcessing).l
 
     ; End of function sub_C480
+		
+sub_C5FC:
+		lea     (FF0FFE_LOADING_SPACE).l,a1
+		move.w  #ICONTILES_BYTESIZE,d7
+		jsr     (j_CopyBytes).l
+		adda.w  #ICONTILES_BYTESIZE,a1
+		move.l  a1,-(sp)
+		move.w  #$BF,d0 
+loc_C616:
+		clr.l   (a1)+
+		dbf     d0,loc_C616
+                
+		movea.l (sp)+,a1
+		rts
+		
+sub_C624:
+		moveq   #5,d7
+loc_C626:
+		move.l  (a0)+,$10(a1)
+		move.l  (a0)+,$14(a1)
+		move.l  (a0)+,$18(a1)
+		move.l  (a0)+,$1C(a1)
+		move.l  (a0)+,$40(a1)
+		move.l  (a0)+,$44(a1)
+		move.l  (a0)+,$48(a1)
+		move.l  (a0)+,$4C(a1)
+		adda.w  #$20,a1 
+		dbf     d7,loc_C626
+                
+		adda.w  #$40,a1
+		rts
 
 
 ; =============== S U B R O U T I N E =======================================

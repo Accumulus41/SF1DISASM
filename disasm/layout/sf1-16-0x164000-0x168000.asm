@@ -224,7 +224,7 @@ sub_164100:
 		move.w  #$200,d0
 		jsr     (j_ApplyImmediateVramDmaOnCompressedTiles).l
 		lea     word_166400(pc), a0
-		lea     (loc_E000).l,a1
+		lea     ($E000).l,a1
 		moveq   #$15,d7
 loc_164156:
 		movem.w d7,-(sp)

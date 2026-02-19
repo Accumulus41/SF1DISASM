@@ -66,4 +66,6 @@ table_ItemNames:
     itemName "Steel", 9, "Arrow"   ; STEEL_ARROW
     itemName "Assault", 9, "Shell"   ; ASSAULT_SHELL
     itemName "Buster", 9, "Shot"   ; BUSTER_SHOT
+	
+	align $182200
 

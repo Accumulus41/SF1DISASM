@@ -1196,12 +1196,12 @@ sub_77A4:
 		jsr     (j_CheckEventFlag).l
 		bne.w   sub_7898
 		bsr.w   sub_80C4
-		cmpi.b  #$FF,d3 ; item 'nothing' ; 0x77C4
+		cmpi.w  #$FF,d3 ; item 'nothing' ; 0x77C4
 		beq.w   sub_7898
 		clr.w   d7
 		move.b  ((byte_FFB4C5-$1000000)).w,d7
 		move.w  d7,((MESSAGE_ARG_NAME_1-$1000000)).w
-		cmpi.b  #$FF,d3 ; item 'nothing' ; 0x77D6
+		cmpi.w  #$FF,d3 ; item 'nothing' ; 0x77D6
 		bgt.w   loc_78B0
 		move.w  d3,((MESSAGE_ARG_NAME_2-$1000000)).w
 		jsr     (j_OpenMessageWindow).l
@@ -1266,7 +1266,7 @@ loc_78A4:
 		jsr     (j_SetEventFlag).l
 		bra.s   sub_788C
 loc_78B0:
-		subi.w  #64,d3
+		subi.w  #256,d3
 		add.w   d3,d3
 		clr.l   d1
 		move.w  table_BattleChestGoldAmounts(pc,d3.w),d1

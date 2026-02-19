@@ -571,3 +571,1731 @@ table_ItemData:
         attackEffect ARROW_LONG, ATTACK
         price        12400
 
+    ; ITEM 063
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 064
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 065
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 066
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 067
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 068
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 069
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 070
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 071
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 072
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 073
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 074
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 075
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 076
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 077
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 078
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 079
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 080
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 081
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 082
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 083
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 084
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 085
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 086
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 087
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 088
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 089
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 090
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 091
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 092
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 093
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 094
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 095
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 096
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 097
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 098
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 099
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 100
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 101
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 102
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 103
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 104
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 105
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 106
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 107
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 108
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 109
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 110
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 111
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 112
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 113
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 114
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 115
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 116
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 117
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 118
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 119
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 120
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 121
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 122
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 123
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 124
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 125
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 126
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 127
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 128
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 129
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 130
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 131
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 132
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 133
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 134
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 135
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 136
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 137
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 138
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 139
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 140
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 141
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 142
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 143
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 144
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 145
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 146
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 147
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 148
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 149
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 150
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 151
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 152
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 153
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 154
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 155
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 156
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 157
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 158
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 159
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 160
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 161
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 162
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 163
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 164
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 165
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 166
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 167
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 168
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 169
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 170
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 171
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 172
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 173
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 174
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 175
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 176
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 177
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 178
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 179
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 180
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 181
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 182
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 183
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 184
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 185
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 186
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 187
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 188
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 189
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 190
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 191
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 192
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 193
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 194
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 195
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 196
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 197
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 198
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 199
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 200
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 201
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 202
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 203
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 204
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 205
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 206
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 207
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 208
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 209
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 210
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 211
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 212
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 213
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 214
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 215
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 216
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 217
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 218
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 219
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 220
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 221
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 222
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 223
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 224
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 225
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 226
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 227
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 228
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 229
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 230
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 231
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 232
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 233
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 234
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 235
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 236
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 237
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 238
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 239
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 240
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 241
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 242
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 243
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 244
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 245
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 246
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 247
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 248
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 249
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 250
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 251
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 252
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 253
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+
+    ; ITEM 254
+        equipFlags   ALL
+        itemType     FILLER
+        equipEffect  NONE, 0
+        useEffect    NONE, ATTACK
+        turnEffect   NONE, 00
+        attackEffect NONE, 00
+        price        0
+

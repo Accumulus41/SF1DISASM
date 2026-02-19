@@ -18,3 +18,4 @@
 		include "layout\sf1-15-0x144000-0x164000.asm"		; 0x144000..0x164000 : Ally battlesprites and animations, weapon sprites and palettes, battle platforms
 		include "layout\sf1-16-0x164000-0x168000.asm"		; 0x164000..0x168000 : 
 		include "layout\sf1-17-0x168000-0x180000.asm"		; 0x168000..0x180000 : PCM banks, Music banks, Sound driver, YM instruments
+		include "layout\sf1-2mb-expansion.asm"

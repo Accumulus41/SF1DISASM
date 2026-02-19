@@ -436,6 +436,7 @@ byte_5CE6:
 		move.w  ((CURRENT_OBJECT-$1000000)).w,d0
 		clr.w   d1
 		move.b  ((CURRENT_DIAMOND_MENU_SELECTION-$1000000)).w,d1
+		add.b   d1,d1
 		jmp     j_RemoveItem
 
 ; END OF FUNCTION CHUNK FOR ExecuteItemMenu
@@ -491,7 +492,7 @@ loc_5D6A:
 loc_5D7E:
 		jsr     j_GetEntityItemsAddress
 		move.w  d0,((word_FFB7C8-$1000000)).w
-		cmpi.w  #$00FF,3(a0) ; empty slot  ; 0x5D88
+		cmpi.w  #$00FF,6(a0) ; empty slot  ; 0x5D88
 		beq.s   loc_5DA0        ; branch if member has an empty item slot
 		move.w  d0,-(sp)
 		jsr     j_PickItemSlot

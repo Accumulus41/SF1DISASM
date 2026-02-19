@@ -540,7 +540,7 @@ GetEnemyEntryAddress:
 		move.l  a0,d1
 		beq.s   loc_2201C
 		andi.w  #FORCEMEMBERENTRY_MASK_INDEX_0,d0
-		asl.w   #2,d0
+		mulu.w  #6,d0
 		adda.w  d0,a0
 		move.b  (a0),d1
 		cmpi.b  #-1,d1
@@ -869,7 +869,7 @@ loc_221A8:
 
 JoinForce:
 		movem.l d1-d2,-(sp)
-		bsr.s   dup_IsInForce   
+		bsr.w   IsInForce   
 		bne.s   loc_221CE
 		move.l  ((FORCE_MEMBER_FLAGS-$1000000)).w,d1
 		bset    d0,d1
@@ -883,21 +883,8 @@ loc_221CE:
 		rts
 
     ; End of function JoinForce
-
-
-; =============== S U B R O U T I N E =======================================
-
-; Check if force member D0 has joined (duplicate)
-
-dup_IsInForce:
-		
-		movem.l d1,-(sp)
-		move.l  ((FORCE_MEMBER_FLAGS-$1000000)).w,d1
-		btst    d0,d1
-		movem.l (sp)+,d1
-		rts
-
-    ; End of function dup_IsInForce
+	
+	align $221E4
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -3325,7 +3312,7 @@ RemoveItem:
 loc_22D7E:
 		cmpi.w  #6,d1                     ; 0x22D7E
 		bcc.s   loc_22D8E
-		move.b  2(a0,d1.w),(a0,d1.w)      ; 0x22D84
+		move.w  2(a0,d1.w),(a0,d1.w)      ; 0x22D84
 		addq.w  #2,d1                     ; 0x22D8A
 		bra.s   loc_22D7E
 loc_22D8E:
@@ -3615,6 +3602,8 @@ GetEquippedItem:
 		ble.s   @Loop                 ; 0x22EF0
 		                              ; removed code
 @Exit:
+		moveq   #-1,d3
+		move.w  #$00FF,d2
 		ori     #1,ccr
 		bra.s   @Continue
 @GetItemIndex:
@@ -3666,7 +3655,7 @@ LoadEquippableItems:
 		
 		movem.l d0-d4/a0-a1,-(sp)
 		lea     ((byte_FFA8C2-$1000000)).w,a1
-		moveq   #-1,d3
+		move.l  #$FFFF00FF,d3
 		move.l  d3,(a1)+
 		move.l  d3,(a1)+
 		move.l  d3,(a1)+
@@ -3779,9 +3768,7 @@ GetItemCurseSetting:
 FindItemToDrop:
 		
 		movem.l d0/d2-d3/a0-a1,-(sp)
-		bsr.w   alt_GetEntity   
-		cmpi.b  #EMPTY_COMBATANT_SLOT,d0
-		beq.s   @Skip           ; skip if combatant entry is unoccupied
+		bsr.w   alt_GetEntity 
 		tst.b   d0
 		bge.s   @Skip           ; skip if force member
 		jsr     j_GetEntityItemsAddress
@@ -3791,7 +3778,7 @@ FindItemToDrop:
 		cmpi.w  #$00FF,d2 ; Empty slot ; 0x23010
 		beq.s   @Skip           ; skip if item slot is empty
 		andi.w  #$FF,d2 ; item mask    ; 0x23016
-		lea     table_ItemsToDrop(pc), a1
+		lea     table_ItemsToDrop, a1
 @FindItem:
 		move.b  (a1)+,d3
 		cmpi.b  #$FF,d3                ; new code
@@ -3810,15 +3797,6 @@ FindItemToDrop:
 		rts
 
     ; End of function FindItemToDrop
-
-table_ItemsToDrop:
-		; List of item indexes to be dropped by enemies, $FF terminated
-		dc.b ITEM_DOOM_BLADE
-		dc.b ITEM_HEAT_AXE
-		dc.b ITEM_ATLAS
-		dc.b ITEM_DEMON_ROD
-		dc.b ITEM_YOGURT_RING
-		dc.b $FF
 
 ; =============== S U B R O U T I N E =======================================
 

@@ -15,7 +15,7 @@ p_WeaponPalettes:
 p_pt_Platforms: dc.l pt_Platforms
 		include "data\graphics\battles\battlesprites\allies\entries.asm"		; Ally battlesprites
 		include "data\graphics\battles\weapons\entries.asm"		; Weapon sprites
-WeaponPalettes: incbin "data/graphics/battles/weapons/palettes/weaponpalettes.bin"
+		align $161A66
 		include "data\graphics\battles\battlesprites\allies\animations\entries.asm"		; Ally battlesprite animations
 		include "data\graphics\battles\platforms\entries.asm"		; Platform sprites
 		align $4000

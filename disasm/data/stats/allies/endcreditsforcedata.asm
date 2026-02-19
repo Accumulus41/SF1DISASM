@@ -16,4 +16,6 @@ table_EndingCreditsForceData:
     creditsAlly ADAM, CYBG, NOTHING|BROKEN
     creditsAlly ZYLO, WFBN, NOTHING|BROKEN
     dc.w $FFFF
+	
+	align $40
 

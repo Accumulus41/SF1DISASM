@@ -343,11 +343,8 @@ IncrementDealsStock:
 		jsr     j_GetItemType
 		btst    #ITEMTYPE_BIT_RARE,d2
 		beq.s   loc_24E18
-		bsr.s   GetDealsStock   
-		addq.w  #1,d2
-		cmpi.w  #16,d2
-		bcc.s   loc_24E18
-		bsr.s   SetDealsStock   
+		bsr.s   GetDealsStockEntryAddress
+		bset    d1,(a0)
 loc_24E18:
 		move.w  (sp)+,d2
 		rts
@@ -362,60 +359,12 @@ loc_24E18:
 DecrementDealsStock:
 		
 		move.w  d2,-(sp)
-		bsr.s   GetDealsStock   
-		subq.w  #1,d2
-		bcs.s   loc_24E26
-		bsr.s   SetDealsStock   
-loc_24E26:
+		bsr.s   GetDealsStockEntryAddress
+		bclr    d1,(a0)
 		move.w  (sp)+,d2
 		rts
 
     ; End of function DecrementDealsStock
-
-
-; =============== S U B R O U T I N E =======================================
-
-; Get stock of item D1 currently in deals -> D2
-
-GetDealsStock:
-		
-		movem.l d1/a0,-(sp)
-		bsr.s   GetDealsStockEntryAddress
-		bcs.s   loc_24E38
-		move.b  (a0),d2
-		asr.w   #4,d2
-		bra.s   loc_24E3A
-loc_24E38:
-		move.b  (a0),d2
-loc_24E3A:
-		andi.w  #$F,d2
-		movem.l (sp)+,d1/a0
-		rts
-
-    ; End of function GetDealsStock
-
-
-; =============== S U B R O U T I N E =======================================
-
-; Set D2 -> stock of item D1 currently in deals
-
-SetDealsStock:
-		
-		movem.l d1-d2/a0,-(sp)
-		andi.w  #$F,d2
-		bsr.s   GetDealsStockEntryAddress
-		bcs.s   loc_24E58
-		asl.b   #4,d2
-		andi.b  #$F,(a0)
-		bra.s   loc_24E5C
-loc_24E58:
-		andi.b  #$F0,(a0)
-loc_24E5C:
-		or.b    d2,(a0)
-		movem.l (sp)+,d1-d2/a0
-		rts
-
-    ; End of function SetDealsStock
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -425,13 +374,38 @@ loc_24E5C:
 GetDealsStockEntryAddress:
 		
 		lea     (DEALS_ITEMS).l,a0
-		andi.w  #$FF,d1 ; item mask ; 0x24E6A
-		asr.w   #1,d1
+		andi.l  #$FF,d1 ; item mask ; 0x24E6A
+		divu.w  #8,d1   ; 8 items per byte
 		adda.w  d1,a0
+		swap    d1
+		andi.l  #7,d1
 		rts
 
     ; End of function GetDealsStockEntryAddress
 
+
+; =============== S U B R O U T I N E =======================================
+
+; Get item D1 deals stock entry address -> A0
+
+GetDealsStock:
+		
+		movem.l d1/a0,-(sp)
+		bsr.s   GetDealsStockEntryAddress
+		btst    d1,(a0)
+		beq.s   @NoDeal
+		moveq   #1,d2
+		bra.s   @Return
+@NoDeal:
+		moveq   #0,d2
+@Return:
+        andi.w  #$F,d2
+        movem.l (sp)+,d1/a0
+		rts
+
+    ; End of function GetDealsStock
+
+    align $24E70
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -460,7 +434,8 @@ loc_24E9A:
 		movea.l a0,a1
 loc_24E9C:
 		move.b  (a1)+,d2
-		blt.s   loc_24EA6       ; branch out upon reaching end of shop data
+		cmpi.b  #$FF,d2
+		beq.s   loc_24EA6       ; branch out upon reaching end of shop data
 		cmp.b   d2,d1
 		beq.s   loc_24EB0       ; skip displaying item in deals if regularly for sale
 		bra.s   loc_24E9C

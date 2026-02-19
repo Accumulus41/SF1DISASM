@@ -1049,6 +1049,7 @@ EQUIPEFFECT_NONE: equ 255
 ; ---------------------------------------------------------------------------
 
 ; enum ItemTypes (bitfield)
+ITEMTYPE_FILLER: equ 0
 ITEMTYPE_EVIL: equ 1
 ITEMTYPE_WEAPON: equ $100
 ITEMTYPE_RING: equ $200

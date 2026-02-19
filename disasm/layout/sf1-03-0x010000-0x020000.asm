@@ -3022,7 +3022,7 @@ loc_1198E:
 		lea     $20(a0),a0      ; offset to next map
 		bra.s   loc_11974       ; loop through maps
 loc_11994:
-		move.w  d1,(word_FFF8E0).l
+		move.w  d1,(CHEST_INDEX).l
 		move.l  (a0)+,(dword_FFF910).l
 		move.l  (a0)+,(dword_FFF914).l
 		move.l  (a0)+,(dword_FFF918).l
@@ -5742,7 +5742,7 @@ loc_131F0:
 
 sub_131F8:
 		move.w  d1,d2
-		add.w   (word_FFF8E0).l,d2
+		add.w   (CHEST_INDEX).l,d2
 		move.w  d2,d3
 		lsr.w   #3,d2
 		andi.w  #7,d3
@@ -6245,17 +6245,16 @@ loc_13878:
 		subq.b  #1,d0
 		lsl.b   #2,d0
 		ext.w   d0
-		lea     off_139C6(pc), a0
+		lea     pt_ExplorationChestByChapter, a0
 		nop
 		movea.l (a0,d0.w),a0
-		add.w   (word_FFF8E0).l,d6
+		add.w   (CHEST_INDEX).l,d6
 		movem.w d6,-(sp)
-		move.b  (a0,d6.w),d1
-		cmpi.b  #-1,d1
+		add.b   d6,d6
+		move.w  (a0,d6.w),d1
+		cmpi.w  #$FF,d1 ; item 'nothing'  
 		beq.w   loc_13996
-		bmi.s   loc_13918
-		cmpi.b  #$FF,d1 ; item 'nothing' ; 0x138CA
-		beq.w   loc_13996
+		bgt.s   loc_13918
 		ext.w   d1
 		move.w  d1,(MESSAGE_ARG_NAME_2).l
 		clr.w   (MESSAGE_ARG_NAME_1).l
@@ -6274,7 +6273,7 @@ byte_13908:
 		txt     73              ; "But can't carry it![Wait2]"
 		bra.w   loc_1397E
 loc_13918:
-		lea     table_ExplorationChestGoldAmounts(pc), a0
+		lea     table_ExplorationChestGoldAmounts, a0
 		nop
 		andi.w  #3,d1
 		add.w   d1,d1
@@ -6325,93 +6324,8 @@ byte_139B0:
 		rts
 
     ; End of function sub_13828
-
-table_ExplorationChestGoldAmounts:
-		dc.w 50
-		dc.w 70
-		dc.w 100
-		dc.w 200
-off_139C6:      dc.l byte_139E6
-		dc.l byte_13A0A
-		dc.l word_13A0D
-		dc.l word_13A0D
-		dc.l byte_13A16
-		dc.l byte_13A1C
-		dc.l byte_13A25
-		dc.l byte_13A2D
-byte_139E6:     dc.b $3F
-		dc.b 5
-		dc.b 6
-		dc.b $80
-		dc.b 4
-		dc.b 2
-		dc.b 0
-		dc.b $3F
-		dc.b $3F
-		dc.b 0
-		dc.b $3F
-		dc.b $81
-		dc.b $28
-		dc.b $3F
-		dc.b 0
-		dc.b $3F
-		dc.b $1E
-		dc.b $3F
-		dc.b 1
-		dc.b $3F
-		dc.b 5
-		dc.b $3F
-		dc.b $80
-		dc.b 1
-		dc.b $80
-		dc.b 9
-		dc.b $1E
-		dc.b $82
-		dc.b $35
-		dc.b 6
-		dc.b $3F
-		dc.b $3F
-		dc.b $80
-		dc.b $3B
-		dc.b 1
-		dc.b $3F
-byte_13A0A:     dc.b $3F
-		dc.b $C
-		dc.b $FF
-word_13A0D:     dc.w $93F
-		dc.b 7
-		dc.b $3F
-		dc.b $1F
-		dc.b $24
-		dc.b $20
-		dc.b $3F
-		dc.b $3F
-byte_13A16:     dc.b 3
-		dc.b $D
-		dc.b 9
-		dc.b 6
-		dc.b 0
-		dc.b $3F
-byte_13A1C:     dc.b 3
-		dc.b $21
-		dc.b $3F
-		dc.b $2C
-		dc.b $3F
-		dc.b 1
-		dc.b $37
-		dc.b $3F
-		dc.b $3F
-byte_13A25:     dc.b $3F
-		dc.b $3F
-		dc.b 8
-		dc.b $3F
-		dc.b $3F
-		dc.b $2B
-		dc.b $3F
-		dc.b $FF
-byte_13A2D:     dc.b $3F
-		dc.b $FF
-		dc.b $FF
+	
+	align $13A30
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -12996,15 +12910,16 @@ RemoveItemFromForce:
 loc_17F30:
 		movem.l (sp)+,d0-d3
 		jsr     j_GetEntityItemsAddress
-		moveq   #ITEM_SLOTS_COUNTER,d2
+		moveq   #7,d2
 loc_17F3C:
+        subq.b  #1,d2
 		move.w  #$FF,d0 ; item mask ; 0x17F3C
 		and.w   (a0)+,d0            ; 0x17F3E
 		cmp.b   d0,d3
 		dbeq    d2,loc_17F3C
 
 		bne.s   loc_17F60
-		moveq   #3,d1
+		moveq   #6,d1
 		sub.w   d2,d1
 		clr.w   d0
 		move.b  ((byte_FFF001-$1000000)).w,d0
@@ -21924,7 +21839,7 @@ sub_1D356:
 		move.w  d0,-(sp)
 		move.w  d1,-(sp)
 		move.l  a0,-(sp)
-		lea     table_MapMusics(pc), a0
+		lea     table_MapMusics, a0
 loc_1D360:
 		clr.b   d1
 		move.b  (a0)+,d1
@@ -21943,33 +21858,9 @@ loc_1D36E:
 		rts
 
     ; End of function sub_1D356
-
-table_MapMusics:dc.b MAP_GUARDIANA, MUSIC_TOWN
-		dc.b MAP_GUARDIANA_CASTLE, MUSIC_CASTLE
-		dc.b MAP_ALTERONE, MUSIC_TOWN
-		dc.b MAP_ALTERONE_CASTLE, MUSIC_CASTLE
-		dc.b MAP_RINDO, MUSIC_TOWN
-		dc.b MAP_MANARINA, MUSIC_TOWN
-		dc.b MAP_SHADE_ABBEY, MUSIC_SAD_TOWN
-		dc.b MAP_BUSTOKE, MUSIC_TOWN
-		dc.b MAP_PAO1, MUSIC_TOWN
-		dc.b MAP_PAO2, MUSIC_TOWN
-		dc.b MAP_URANBATOL, MUSIC_BATTLE_2
-		dc.b MAP_WARAL, MUSIC_TOWN
-		dc.b MAP_SHINING_PATH, MUSIC_BATTLE_2
-		dc.b MAP_RUDO, MUSIC_TOWN
-		dc.b MAP_DRAGONIA, MUSIC_BATTLE_3
-		dc.b MAP_PROMPT, MUSIC_TOWN
-		dc.b MAP_PROMPT_CASTLE, MUSIC_CASTLE
-		dc.b MAP_TOWER_OF_THE_ANCIENTS, MUSIC_BATTLE_2
-		dc.b MAP_METAPHA, MUSIC_BATTLE_1
-		dc.b MAP_RUNEFAUST, MUSIC_TOWN
-		dc.b MAP_SHIP_DECK, MUSIC_BATTLE_4
-		dc.b MAP_CABIN, MUSIC_TOWN
-		dc.b MAP_GUARDIANA_RUINED, MUSIC_SAD_TOWN
-		dc.b MAP_RUNEFAUST_CASTLE, MUSIC_BATTLE_2
-		dc.b -1, MUSIC_TOWN
-		rts
+		
+		align $1D3B2
+		
 		include "data\battles\global\exits\entries.asm"		; Battle exits table
 		include "data\battles\global\battlechests.asm"		; Chest data
 

@@ -106,7 +106,7 @@ j_JoinForce:
 
     ; End of function j_JoinForce
 
-j_dup_IsInForce:jmp     dup_IsInForce(pc)
+j_dup_IsInForce:jmp     PopulateForceMembersList(pc)
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -2121,7 +2121,7 @@ j_InitializeBattleData:
 		include "code\common\stats\statsengine_1.asm"		; Character stats engine
 		include "data\stats\ranges\rangedata.asm"		; Battleactions range data table
 		include "code\common\stats\statsengine_2.asm"		; Character stats engine
-		include "data\stats\allies\promotedportraits.asm"		; Portraits used for promoted allies
+		align $23A3E
 		include "code\common\stats\statsengine_3.asm"		; Character stats engine
 		include "data\stats\allies\outfits.asm"		; Character outfits data
 		include "code\common\stats\statsengine_4.asm"		; Character stats engine
@@ -2177,14 +2177,15 @@ AiAction_UseItem:
 LoadRegularAttackData:
 		
 		movem.l d4-d5,-(sp)
-		clr.b   ((CURRENT_ATTACK_TYPE-$1000000)).w
+		clr.w   ((CURRENT_ATTACK_TYPE-$1000000)).w
 		clr.b   ((BATTLE_ANIMATION_TYPE-$1000000)).w
 		bsr.w   Battleaction_Attack
 		move.b  d4,((CURRENT_RANGE-$1000000)).w
 		move.b  d5,((CURRENT_EFFECT-$1000000)).w
 		bsr.s   LoadRangeData   
-		clr.b   ((CURRENT_BATTLEACTION_TYPE-$1000000)).w
+		;clr.b   ((CURRENT_BATTLEACTION_TYPE-$1000000)).w
 		movem.l (sp)+,d4-d5
+		rts
 		rts
 
     ; End of function LoadRegularAttackData
@@ -2492,8 +2493,7 @@ ApplyClassToTargetPriority:
 		include "code\gameflow\battle\battlefunctions.asm"		; Battle functions
 		include "data\stats\allies\chardata.asm"			; Initial character data
 		include "data\stats\allies\battlespritedata.asm"		; Ally battlesprites table
-		include "data\stats\items\itemnames.asm"		; Item names
-		include "data\stats\items\itemdata.asm"		; Item definitions
+		align $25D06
 		include "data\stats\items\weaponsprites.asm"		; Weaponsprite table
 		include "data\stats\items\itemtypes.asm"		; Item types table
 		include "data\stats\classes\classnames.asm"		; Names for enemies and ally classes
@@ -2513,7 +2513,7 @@ table_26BF2:    dc.b 2
 		include "data\stats\allies\charactergrowths.asm"		; Ally growth tables
 		include "data\stats\allies\spelllearningdata.asm"		; Ally spell tables
 		include "code\gameflow\end\endingcreditsbattlescenes_1.asm"		; Ending credits battle scenes, part 1
-		include "data\stats\allies\endcreditsforcedata.asm"		; Ally data for credits scenes
+		align $26F0A
 		include "code\gameflow\end\endingcreditsbattlescenes_2.asm"		; Ending credits battle scenes, part 2
 		include "code\gameflow\battle\battleinit.asm"		; Battle initialization functions
 		include "data\battles\global\battlemapheaders.asm"		; Battle map headers relative pointer table
@@ -2522,5 +2522,4 @@ table_2751A:    dc.b 0
 		include "data\stats\enemies\enemydefs.asm"		; Enemy definitions
 		include "data\battles\global\battleterrain.asm"		; Battle terrain data
 		include "data\battles\global\battledata.asm"		; Position/enemy/ai data for battles
-		dc.b $FF
-		align $4000
+		align $100

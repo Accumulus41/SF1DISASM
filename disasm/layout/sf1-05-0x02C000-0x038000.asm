@@ -10,5 +10,4 @@ p_pt_Portraits: dc.l pt_Portraits
 		include "code\gameflow\start\regioncheck.asm"		; Region check functions
 font_VariableWidth:
 		incbin "data/graphics/tech/fonts/variablewidthfont.bin"
-		include "data\graphics\portraits\entries.asm"		; Portraits
-		align $8000
+		align $38000

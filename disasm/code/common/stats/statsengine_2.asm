@@ -544,8 +544,8 @@ Battleaction_UseItem:
 		movem.l d1/a0,-(sp)
 		jsr     j_GetEntityItemsAddressForCombatant
 		andi.w  #$FF,d1
-		move.w  d1,((SELECTED_ITEM_SLOT-$1000000)).w
 		add.b   d1,d1          ; new code
+		move.w  d1,((SELECTED_ITEM_SLOT-$1000000)).w
 		move.w  (a0,d1.w),d1   ; 0x23696
 		move.w  d1,((SELECTED_ITEM_ENTRY-$1000000)).w
 		bsr.s   GetItemUseRangeAndEffect
@@ -1089,7 +1089,8 @@ GetPortrait:
 		move.b  d0,d1
 		bsr.w   IsPromoted      
 		beq.s   @Done
-		move.b  table_PromotedPortraits(pc,d1.w),d1
+		lea    table_PromotedPortraits,a0
+		move.b  (a0,d1.w),d1
 @Done:
 		movem.l (sp)+,a0-a1
 		rts

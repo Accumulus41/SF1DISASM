@@ -35,4 +35,4 @@ table_PromotedPortraits:
 		dc.b PORTRAIT_JOGURT
 		dc.b PORTRAIT_VARIOS    ; Nova
         
-		align
+		align $80

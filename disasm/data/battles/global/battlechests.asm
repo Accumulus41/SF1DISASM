@@ -23,22 +23,12 @@ table_BattleChests:
             chestItem 0, 0, 0, $FF
             chestItem 0, 0, 0, $FF
             chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
             chestItem 2, 31, 9, $00 ; MEDICAL_HERB
             chestItem 2, 29, 28, $FF ; NOTHING
             chestItem 2, 28, 28, $FF ; NOTHING
             chestItem 2, 27, 22, $FF ; NOTHING
             chestItem 2, 16, 19, $1E ; MIDDLE_SWORD
+			dc.w $FFFF
     
             ; Chapter 2
             chestItem 0, 0, 0, $FF
@@ -54,18 +44,7 @@ table_BattleChests:
             chestItem 0, 0, 0, $FF
             chestItem 0, 0, 0, $FF
             chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 4, 18, 7, $FF
+            chestItem 4, 18, 7, $100
             chestItem 4, 19, 7, $3C ; STEEL_ARROW
             chestItem 4, 25, 4, $06 ; DEFENSE_POTION
             chestItem 3, 4, 5, $38 ; POWER_STAFF
@@ -73,19 +52,9 @@ table_BattleChests:
             chestItem 3, 11, 19, $00 ; MEDICAL_HERB
             chestItem 3, 17, 19, $0A ; POWER_RING
             chestItem 3, 24, 3, $12 ; ORB_OF_LIGHT
+			dc.w $FFFF
     
             ; Chapter 3
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
             chestItem 0, 0, 0, $FF
             chestItem 0, 0, 0, $FF
             chestItem 0, 0, 0, $FF
@@ -107,6 +76,7 @@ table_BattleChests:
             chestItem 2, 17, 10, $15 ; KITUI_HUKU
             chestItem 1, 5, 38, $11 ; SUGOI_MIZUGI
             chestItem 1, 9, 33, $13 ; MOON_STONE
+			dc.w $FFFF
     
             ; Chapter 4
             chestItem 0, 0, 0, $FF
@@ -129,18 +99,8 @@ table_BattleChests:
             chestItem 0, 0, 0, $FF
             chestItem 0, 0, 0, $FF
             chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
             chestItem 2, 15, 33, $17 ; KENJI
+			dc.w $FFFF
     
             ; Chapter 5
             chestItem 0, 0, 0, $FF
@@ -162,32 +122,11 @@ table_BattleChests:
             chestItem 0, 0, 0, $FF
             chestItem 0, 0, 0, $FF
             chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
             chestItem 1, 9, 26, $13 ; MOON_STONE
             chestItem 3, 17, 27, $18 ; TEPPOU
+			dc.w $FFFF
     
             ; Chapter 6
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
             chestItem 0, 0, 0, $FF
             chestItem 0, 0, 0, $FF
             chestItem 0, 0, 0, $FF
@@ -209,6 +148,7 @@ table_BattleChests:
             chestItem 3, 8, 3, $0F ; BLACK_RING
             chestItem 3, 3, 9, $01 ; HEALING_SEED
             chestItem 3, 2, 9, $10 ; EVIL_RING
+			dc.w $FFFF
     
             ; Chapter 7
             chestItem 0, 0, 0, $FF
@@ -231,31 +171,10 @@ table_BattleChests:
             chestItem 0, 0, 0, $FF
             chestItem 0, 0, 0, $FF
             chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
             chestItem 2, 18, 11, $2F ; VALKYRIE
+			dc.w $FFFF
     
             ; Chapter 8
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
-            chestItem 0, 0, 0, $FF
             chestItem 0, 0, 0, $FF
             chestItem 0, 0, 0, $FF
             chestItem 0, 0, 0, $FF
@@ -277,4 +196,5 @@ table_BattleChests:
             chestItem 1, 20, 22, $2C ; HALBERD
             chestItem 2, 16, 32, $34 ; ATLAS
             chestItem 2, 20, 32, $2C ; HALBERD
+			dc.w $FFFF
 

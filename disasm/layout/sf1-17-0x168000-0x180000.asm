@@ -9,3 +9,4 @@
 SoundDriver:    incbin "data/sound/sounddriver.bin"
 		incbin "data/sound/instruments.bin"
 		incbin "data/sound/musicbank1.bin"
+		align

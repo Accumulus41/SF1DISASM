@@ -1,7 +1,8 @@
 
 ; ASM FILE data\maps\entries.asm :
 ; 0x820CC..0xB97F4 : Map data
-pt_Maps:        dc.l Map00Section0
+pt_Maps:
+        dc.l Map00Section0
 		dc.l Map00Section1
 		dc.l Map00Section2
 		dc.l Map00Section3
@@ -10,7 +11,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 5
 		dc.b 1
-		dc.b $38                ; 0000 0xxx = chapter association
+		dc.b $38	; Chapter 1, Chests  7
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -24,7 +25,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 5
 		dc.b 6
-		dc.b 0
+		dc.b 0		; Chapter 1, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -38,7 +39,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 4
 		dc.b 0
-		dc.b 8
+		dc.b 8		; Chapter 1, Chests 1
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -52,7 +53,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 4
 		dc.b 0
-		dc.b 8
+		dc.b 8		; Chapter 1, Chests 1
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -66,7 +67,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 5
 		dc.b 3
-		dc.b $80
+		dc.b $80	; Chapter 1, Chests 16
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -80,7 +81,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 5
 		dc.b 2
-		dc.b $58
+		dc.b $58	; Chapter 1, Chests 11
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -94,7 +95,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b $4A
 		dc.b 3
-		dc.b $19
+		dc.b $19	; Chapter 2, Chests 3
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -108,7 +109,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 5
 		dc.b 7
-		dc.b 2
+		dc.b 2		; Chapter 3, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -122,7 +123,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 4
 		dc.b 5
-		dc.b 1
+		dc.b 1		; Chapter 2, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -136,7 +137,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 2
 		dc.b 7
 		dc.b 4
-		dc.b $2B
+		dc.b $2B	; Chapter 4, Chests 5
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -150,7 +151,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b $D3
 		dc.b 4
-		dc.b $23
+		dc.b $23	; Chapter 4, Chests 4
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -164,7 +165,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 5
 		dc.b 2
-		dc.b 0
+		dc.b 0		; Chapter 1, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -178,7 +179,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b $4A
 		dc.b 4
-		dc.b 0
+		dc.b 0		; Chapter 1, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -192,7 +193,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b $4A
 		dc.b 9
-		dc.b 1
+		dc.b 1		; Chapter 2, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -206,7 +207,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 5
 		dc.b 1
-		dc.b $17
+		dc.b $17	; Chapter 8, Chests 2
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -220,7 +221,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 2
 		dc.b $9D
 		dc.b 8
-		dc.b 0
+		dc.b 0		; Chapter 1, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -234,7 +235,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 5
 		dc.b 5
-		dc.b 6
+		dc.b 6		; Chapter 7, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -248,7 +249,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 5
 		dc.b 6
-		dc.b 0
+		dc.b 0		; Chapter 1, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -262,7 +263,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b $FF
 		dc.b $FF
 		dc.b $10
-		dc.b 0
+		dc.b 0		; Chapter 1, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -276,7 +277,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 2
 		dc.b $B1
 		dc.b $10
-		dc.b 0
+		dc.b 0		; Chapter 1, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -290,7 +291,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 1
 		dc.b $1E
 		dc.b $10
-		dc.b 0
+		dc.b 0		; Chapter 1, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -304,7 +305,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 2
 		dc.b $E8
 		dc.b $10
-		dc.b 0
+		dc.b 0		; Chapter 1, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -318,7 +319,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b $89
 		dc.b $10
-		dc.b 0
+		dc.b 0		; Chapter 1, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -332,7 +333,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 2
 		dc.b $10
-		dc.b 0
+		dc.b 0		; Chapter 1, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -346,7 +347,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b $61
 		dc.b $11
-		dc.b 0
+		dc.b 0		; Chapter 1, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -360,7 +361,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 2
 		dc.b $21
-		dc.b 0
+		dc.b 0		; Chapter 1, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -374,7 +375,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 3
 		dc.b $20
-		dc.b 1
+		dc.b 1		; Chapter 2, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -388,7 +389,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 6
 		dc.b $21
-		dc.b 5
+		dc.b 5		; Chapter 6, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -402,7 +403,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 3
 		dc.b $40
 		dc.b $20
-		dc.b 2
+		dc.b 2		; Chapter 3, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -416,7 +417,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 4
 		dc.b $33
-		dc.b 3
+		dc.b 3		; Chapter 4, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -430,7 +431,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b $7D
 		dc.b $30
-		dc.b $16
+		dc.b $16	; Chapter 7, Chests 2
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -444,7 +445,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 4
 		dc.b $31
-		dc.b $2D
+		dc.b $2D	; Chapter 6, Chests 5
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -458,7 +459,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b $96
 		dc.b $37
-		dc.b $34
+		dc.b $34	; Chapter 5, Chests 6
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -472,7 +473,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 4
 		dc.b $30
-		dc.b $25
+		dc.b $25	; Chapter 6, Chests 4
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -486,7 +487,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 4
 		dc.b $32
-		dc.b 6
+		dc.b 6		; Chapter 7, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -500,7 +501,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 2
 		dc.b $94
 		dc.b $34
-		dc.b 2
+		dc.b 2		; Chapter 3, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -514,7 +515,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b $96
 		dc.b $35
-		dc.b $36
+		dc.b $36	; Chapter 7, Chests 6
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -528,7 +529,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 2
 		dc.b $94
 		dc.b $36
-		dc.b 7
+		dc.b 7		; Chapter 8, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -542,7 +543,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 4
 		dc.b $38
-		dc.b 0
+		dc.b 0		; Chapter 1, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -556,7 +557,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 2
 		dc.b $94
 		dc.b $39
-		dc.b 7
+		dc.b 7		; Chapter 8, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -570,7 +571,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 0
 		dc.b 6
 		dc.b $40
-		dc.b 0
+		dc.b 0		; Chapter 1, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -584,7 +585,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 3
 		dc.b $5B
 		dc.b $40
-		dc.b 4
+		dc.b 4		; Chapter 5, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -598,7 +599,7 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 2
 		dc.b $94
 		dc.b $50
-		dc.b 4
+		dc.b 4		; Chapter 5, Chests 0
 		dc.b 0
 		dc.b 0
 		dc.b 0
@@ -612,9 +613,8 @@ pt_Maps:        dc.l Map00Section0
 		dc.b 2
 		dc.b $94
 		dc.b $51
-		dc.b 7
+		dc.b 7		; Chapter 8, Chests 0
 		dc.b 0
-                
 		dc.b 0
 		dc.b 0
 		dc.b 0
